@@ -1,7 +1,7 @@
 # cSpell: disable
 
 # Estos ejercicios deben entregarse en un archivo .py en GitHub.
-# El resultado de cada ejercicio debe mostrarse por pantalla. Y las variables 
+# El resultado de cada ejercicio debe mostrarse por pantalla. Y las variables
 # deben quedar todas en el archivo entregado.
 
 # 1. Crea una variable llamada "numero1" y asígnale un número entero de tu
@@ -18,11 +18,11 @@ suma = numero1 + numero2
 print(suma)
 # 4. Ahora crear tres variables más sin borrar lo que tienes. Una para resta,
 # otra para multiplicación y otra para división. Imprime estas variables.
-resta = numero1 - numero2 
+resta = numero1 - numero2
 print(resta)
-multiplicacion = numero1 * numero2 
+multiplicacion = numero1 * numero2
 print(multiplicacion)
-division = numero1/ numero2 
+division = numero1 / numero2
 print(division)
 # 5. Crea una variable llamada "nombre" y asígnale tu nombre como valor.
 nombre = "Víctor"
@@ -51,12 +51,12 @@ print(cadena)
 # utilizando una de las funciones de Python.
 longitud = len(cadena)
 print(longitud)
-# 11. Crea otra vez la variable llamada "precio" y dale un valor decimal, el 
+# 11. Crea otra vez la variable llamada "precio" y dale un valor decimal, el
 # que sea y conviértelo en número entero. Lo puedes hacer en la misma variable # o en otra, da lo mismo.
 precio = int(25499.99)
 print(precio)
 # 12. Crea dos variables. Una se va a llamar "nombre" y la segunda "apellido"
-# concaténalas en una tercera variable llamada "nombre_completo", el nombre y 
+# concaténalas en una tercera variable llamada "nombre_completo", el nombre y
 # el apellido con un espacio entre medio. Puedes usar libremente la forma de
 # concatenación que quieras.
 nombre = "Víctor Hugo"
