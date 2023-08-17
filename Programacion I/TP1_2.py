@@ -1,16 +1,15 @@
-# cSpell:disable
 # TRABAJO PRACTICO 1.2
 
 # Ejercicio 1
 # Calcular el perímetro y área de un rectángulo dada su base y su altura.
-base = float(input("Ingrese el valor de la base del rectangulo: "))
+base = float(input("Ingrese el valor de la base del rectángulo: "))
 altura = int(input("Ingrese el valor de la altura: "))
 
 perimetro_rectangulo = (base * 2) + (altura * 2)
 area_rectangulo = base * altura
 
 print(
-    f"El àrea del rectangulo es: {area_rectangulo}. \nEl perìmetro del rectangulo es: {perimetro_rectangulo}"
+    f"El area del rectángulo es: {area_rectangulo}. \nEl perímetro del rectángulo es: {perimetro_rectangulo}"
 )
 
 # Ejercicio 2
@@ -25,8 +24,8 @@ print(f"La hipotenusa del triangulo es: {hipotenusa}")
 # Ejercicio 3
 # Dados dos números, mostrar la suma, resta, división y multiplicación de
 # ambos.
-num1 = int(input("Ingrese el valor del primer nùmero: "))
-num2 = int(input("Ingrese el valor del segundo nùmero: "))
+num1 = int(input("Ingrese el valor del primer número: "))
+num2 = int(input("Ingrese el valor del segundo número: "))
 
 suma_numeros = num1 + num2
 
@@ -38,11 +37,11 @@ print(f"La resta de {num1} y {num2} es igual a: {resta_numeros}")
 
 multiplicacion_numeros = num1 * num2
 
-print(f"La multiplicaiòn de {num1} y {num2} es igual a: {multiplicacion_numeros}")
+print(f"La multiplicación de {num1} y {num2} es igual a: {multiplicacion_numeros}")
 
 division_numeros = num1 / num2
 
-print(f"La divisiòn de {num1} y {num2} es igual a: {division_numeros}")
+print(f"La división de {num1} y {num2} es igual a: {division_numeros}")
 
 # Ejercicio 4
 # Escribir un programa que convierta un valor dado en grados Fahrenheit a
@@ -50,9 +49,9 @@ print(f"La divisiòn de {num1} y {num2} es igual a: {division_numeros}")
 # C = (F - 32) * 5/9
 grados_celcius = float(input("Ingrese el valor de los grados Celsius: "))
 
-convert_to_Fahrenheit = (grados_celcius - 32) * 5/9
+convert_to_Fahrenheit = (grados_celcius - 32) * 5 / 9
 
-print(f"La conversiòn de {grados_celcius}ºC a Fahrenheit es: {convert_to_Fahrenheit}")
+print(f"La conversión de {grados_celcius}ºC a Fahrenheit es: {convert_to_Fahrenheit}")
 
 
 # ¿Qué problemas tienen las siguientes instrucciones?¿Cómo las solucionarías?
