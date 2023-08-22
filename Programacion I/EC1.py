@@ -1,5 +1,7 @@
 # cSpell: disable
 
+# EJERCICIOS COMPLEMENTARIOS
+
 # Estos ejercicios deben entregarse en un archivo .py en GitHub.
 # El resultado de cada ejercicio debe mostrarse por pantalla. Y las variables
 # deben quedar todas en el archivo entregado.
