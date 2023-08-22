@@ -34,7 +34,7 @@ arancel en $ por cada alumno, para luego imprimir el ingreso total en $. """
 
 
 FECHA = str(input("Ingrese la fecha actual en formato 'dìa, DD/MM': "))
-DIA_SEMANA = FECHA[0 : FECHA.find(",")]
+DIA_SEMANA = FECHA[0 : FECHA.find(",")].lower()
 DIA = int(FECHA[FECHA.find(" ") + 1 : FECHA.find("/")])
 MES = int(FECHA[FECHA.find("/") + 1 :])
 SEMANA = ("lunes", "martes", "miercoles", "jueves", "viernes")
