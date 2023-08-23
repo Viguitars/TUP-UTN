@@ -1,3 +1,5 @@
+""" cSpell:disable"""
+
 # TRABAJO PRACTICO 1.2
 
 # Ejercicio 1
@@ -9,7 +11,11 @@ perimetro_rectangulo = (base * 2) + (altura * 2)
 area_rectangulo = base * altura
 
 print(
-    f"El area del rectángulo es: {area_rectangulo}. \nEl perímetro del rectángulo es: {perimetro_rectangulo}"
+    "El area del rectángulo es: "
+    + str(area_rectangulo)
+    + ".\nEl perímetro del rectángulo es: "
+    + str(perimetro_rectangulo)
+    + "."
 )
 
 # Ejercicio 2
@@ -17,7 +23,7 @@ print(
 cateto1 = float(input("Ingrese el valor del primer cateto: "))
 cateto2 = float(input("Ingrese el valor del segundo cateto: "))
 
-hipotenusa = ((cateto1) ** 2 + (cateto2) ** 2) ** 1 / 2
+hipotenusa = (cateto1 ** 2) + (cateto2 ** 2) ** (1 / 2)
 
 print(f"La hipotenusa del triangulo es: {hipotenusa}")
 
@@ -28,19 +34,20 @@ num1 = int(input("Ingrese el valor del primer número: "))
 num2 = int(input("Ingrese el valor del segundo número: "))
 
 suma_numeros = num1 + num2
-
-print(f"La suma de {num1} y {num2} es igual a: {suma_numeros}")
-
 resta_numeros = num1 - num2
-
-print(f"La resta de {num1} y {num2} es igual a: {resta_numeros}")
-
 multiplicacion_numeros = num1 * num2
-
-print(f"La multiplicación de {num1} y {num2} es igual a: {multiplicacion_numeros}")
-
 division_numeros = num1 / num2
 
+print(f"La suma de {num1} y {num2} es igual a: {suma_numeros}")
+print(f"La resta de {num1} y {num2} es igual a: {resta_numeros}")
+print(
+    "La multiplicación de "
+    + str(int(num1))
+    + " y "
+    + str(int(num2))
+    + " es igual a: "
+    + str(int(multiplicacion_numeros))
+)
 print(f"La división de {num1} y {num2} es igual a: {division_numeros}")
 
 # Ejercicio 4
@@ -49,27 +56,55 @@ print(f"La división de {num1} y {num2} es igual a: {division_numeros}")
 # C = (F - 32) * 5/9
 grados_celcius = float(input("Ingrese el valor de los grados Celsius: "))
 
-convert_to_Fahrenheit = (grados_celcius - 32) * 5 / 9
+convert_to_fahrenheit = (grados_celcius * 9 / 5) + 32
 
-print(f"La conversión de {grados_celcius}ºC a Fahrenheit es:{convert_to_Fahrenheit}")
+print(
+    "La conversión de "
+    + str(int(grados_celcius))
+    + "ºC a Fahrenheit es: "
+    + str(int(convert_to_fahrenheit))
+)
 
-
+# Ejercicio 5
 # ¿Qué problemas tienen las siguientes instrucciones?¿Cómo las solucionarías?
-
 # A = input(nombre, “¿Cuál es tu canción favorita?”)
+nombre = input("Nombre: ")
+A = input(f"{nombre}, ¿Cuál es tu canción favorita?")
 # precio = input(“Precio: “)
 # total = precio + (precio * 0.1)
+precio = float(input("Precio: "))
+total = precio + (precio * 0.1)
 # edad = int(input(“Edad: “))
 # print(tu edad es, edad)
+edad = int(input("Edad: "))
+print(f"tu edad es, {edad}")
 # edad = int(input(“Edad: “))
 # print(“Veamos si tu edad es 18…”, edad=18)
+edad = int(input("Edad: "))
+print(f"Veamos si tu edad es 18…, {edad==18}")
 
+# Ejercicio 6
 # Calcular la media de tres números pedidos por teclado.
+num1 = float(input("Ingrese el primer número: "))
+num2 = float(input("Ingrese el segundo número: "))
+num3 = float(input("Ingrese el tercer número: "))
 
+promedio = (num1 + num2 + num3) / 3
+
+print(f"La media de los número {num1}, {num2} y {num3} es : {promedio}")
+
+# Ejercicio 7
 # Realiza un programa que reciba una cantidad de minutos y muestre por
 # pantalla a cuantas horas y minutos corresponde. Por ejemplo: 1000 minutos
 # son 16 horas y 40 minutos.
+minutos_totales = int(input("Ingrese la cantidad de minutos: "))
 
+horas = minutos_totales // 60
+minutos = minutos_totales % 60
+
+print(f"{minutos_totales} minutos son: {horas} horas y {minutos} minutos.")
+
+# Ejercicio 8
 # Un vendedor recibe un sueldo base mas un 10% extra por comisión de sus
 # ventas, el vendedor desea saber cuanto dinero obtendrá por concepto de
 # comisiones por las tres ventas que realiza en el mes y el total que recibirá
