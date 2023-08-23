@@ -1,4 +1,4 @@
-#cSpell:disable
+# cSpell:disable
 
 """ Un instituto de inglés necesita un programa que le permita, cada día, 
 procesar observaciones sobre las clases de ese día. El instituto dicta clases 
@@ -37,7 +37,29 @@ FECHA = str(input("Ingrese la fecha actual en formato 'dìa, DD/MM': "))
 DIA_SEMANA = FECHA[0 : FECHA.find(",")].lower()
 DIA = int(FECHA[FECHA.find(" ") + 1 : FECHA.find("/")])
 MES = int(FECHA[FECHA.find("/") + 1 :])
-SEMANA = ("lunes", "martes", "miercoles", "jueves", "viernes")
+SEMANA = ["lunes", "martes", "miercoles", "jueves", "viernes"]
+DIAS_EXAMEN = SEMANA[:3]
 
-if (DIA_SEMANA not in SEMANA) or (DIA > 31) or (MES > 12):
+if DIA_SEMANA not in SEMANA or DIA > 31 or MES > 12:
     print("La fecha ingresada es incorrecta.")
+else:
+    if DIA_SEMANA in DIAS_EXAMEN:
+        examenes = input(print("¿Hubo exámen? (Sí/NO): ")).lower()
+        if examenes == "si":
+            aprobados = int(input("Cantidad de alumnos aprobados: "))
+            desaprobados = int(input("Cantidad de alumnos desaprobados: "))
+            porcentaje_aprobados = aprobados / (aprobados + desaprobados) * 100
+            print(f"Porcentaje de aprobados: {porcentaje_aprobados}%")
+    elif DIA_SEMANA == "jueves":
+        asistencia = float(input("Porcentaje de asistencia a práctica hablada:"))
+        if asistencia > 50:
+            print("Asistió la mayoría")
+        else:
+            print("No asistió la mayoría")
+    elif DIA_SEMANA == "viernes":
+        if DIA == 1 and (MES == 1 or MES == 7):
+            print("Comienzo de nuevo ciclo")
+            cantidad_alumnos = int(input("Cantidad de alumnos del nuevo ciclo: "))
+            arancel = int(input("Arancel por alumno en $: "))
+            ingreso_total = cantidad_alumnos * arancel
+            print(f"Ingreso total en $: {ingreso_total}")
