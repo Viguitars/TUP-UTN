@@ -1,4 +1,5 @@
 """ cSpell: disable """
+import math as m
 
 # TRABAJO PRACTICO 1.2
 
@@ -151,46 +152,144 @@ print(f"La calificación final del alumno es: {calificacion_total}")
 # Ejercicio 11
 # Pide al usuario dos números y muestra la “distancia” entre ellos (el valor
 # absoluto de su diferencia, de modo que el resultado sea siempre positivo).
+num1 = int(input("Ingrese el primer número: "))
+num2 = int(input("Ingrese el segundo número: "))
+distancia = abs(num1 - num2)
+
+print(f"La distancia de los números {num1} y {num2} es: {distancia}")
 
 # Ejercicio 12
 # Realizar un algoritmo que lea un número y que muestre su raíz cuadrada y su
 # raíz cúbica.
+num = int(input("Ingrese un número: "))
+raiz_cuadrada = num ** (1 / 2)
+raiz_cubica = num ** (1 / 3)
+
+print(f"La raíz cuadrada del número {num} es: {raiz_cuadrada}")
+print(f"La raíz cúbica del número {num} es: {raiz_cubica}")
 
 # Ejercicio 13
 # Dado un número de dos cifras, diseñe un algoritmo que permita obtener el
 # número invertido. Ejemplo, si se introduce 23 que muestre 32.
+num = int(input("Ingrese un número de dos cifras: "))
+num_invertido = ((num % 10) * 10) + (num // 10)
+
+print(f"El número invertido de {num} es: {num_invertido}")
 
 # Ejercicio 14
 # Dadas dos variables numéricas A y B, que el usuario debe teclear, se pide
 # realizar un algoritmo que intercambie los valores de ambas variables y
 # muestre cuanto valen al final las dos variables.
+variable_a = int(input("Ingrese el valor de la variable numérica A: "))
+variable_b = int(input("Ingrese el valor de la variable numérica B: "))
+
+aux = variable_a
+variable_a = variable_b
+variable_b = variable_a
+
+print(f"El valor de la variable A es: {variable_a}")
+print(f"El valor de la variable B es: {variable_b}")
 
 # Ejercicio 15
 # Un ciclista parte de una ciudad A a las HH horas, MM minutos y SS segundos.
 # El tiempo de viaje hasta llegar a otra ciudad B es de T segundos. Escribir
 # un algoritmo que determine la hora de llegada a la ciudad B.
+hora_partida = int(input("Hora de partida (HH): "))
+minuto_partida = int(input("Minutos de partida (MM): "))
+segundo_partida = int(input("Segundos de partida (SS): "))
+tiempo_viaje = int(input("Tiempo de viaje en segundos: "))
+
+hora_llegada = hora_partida + (tiempo_viaje // 3600)
+minuto_llegada = minuto_partida + ((tiempo_viaje // 60) % 60)
+segundo_llegada = segundo_partida + ((tiempo_viaje % 3600) % 60)
+
+print(
+    "La hora de llegada es: "
+    + str(int(hora_llegada))
+    + ":"
+    + str(int(minuto_llegada))
+    + ":"
+    + str(int(segundo_llegada))
+)
 
 # Ejercicio 16
 # Pedir el nombre y los dos apellidos de una persona y mostrar las iniciales.
+NOMBRE_COMPLETO = str(input("Ingrese el nombres y sus dos apellidos: ")).upper()
+
+lista_nombre = NOMBRE_COMPLETO.split()
+primer_inicial = lista_nombre[0][:1]
+segunda_inicial = lista_nombre[1][:1]
+tercer_inicial = lista_nombre[2][:1]
+
+print(
+    "Las iniciales de "
+    + str(NOMBRE_COMPLETO)
+    + " son: "
+    + str(primer_inicial)
+    + " - "
+    + str(segunda_inicial)
+    + " - "
+    + str(tercer_inicial)
+)
 
 # Ejercicio 17
 # Solicitar al usuario que ingrese su nombre. El nombre se debe almacenar en
 # una variable llamada usuario. A continuación mostrar por pantalla: “Ahora
 # estás en la matrix, [nombre del usuario]”.
+NOMBRE_DEL_USUARIO = str(input("Ingrese su nombre: "))
+
+print(f"Ahora estás en la matrix, {NOMBRE_DEL_USUARIO}.")
 
 # Ejercicio 18
 # Hacer un programa que solicite al usuario cuánto costó una cena en un
 # restaurante. A ese valor, sumarle un 6.2% en concepto de servicio y un 10%
 # de propina. Imprimir en pantalla el monto final a pagar.
+costo_de_cena = float(input("Ingrese el costo de la cena: "))
+SERVICIO = 0.062
+PROPINA = 0.1
+
+monto_final = costo_de_cena + costo_de_cena * (SERVICIO + PROPINA)
+
+print(f"El monto final a pagar es de: ${monto_final}")
 
 # Ejercicio 19
 # Solicitar al usuario que ingrese el día, mes y año de su nacimiento y
 # almacenar cada uno de ellos en una variable numérica (en total, tres
 # variables diferentes). Finalmente, mostrar la fecha en formato dd/mm/aaaa.
+print("Ingrese su fecha de nacimiento: ")
+dia_nacimiento = int(input("día (dd): "))
+mes_nacimiento = int(input("mes (mm): "))
+anio_nacimiento = int(input("año (aaaa): "))
+print(type(dia_nacimiento))
+
+if len(str(dia_nacimiento)) < 2:
+    dia_nacimiento = "0" + str(dia_nacimiento)
+
+if len(str(mes_nacimiento)) < 2:
+    mes_nacimiento = "0" + str(mes_nacimiento)
+
+fecha_con_formato = f"{dia_nacimiento}/{mes_nacimiento}/{anio_nacimiento}"
+
+print(f"La fecha de nacimiento es: {fecha_con_formato}")
 
 # Ejercicio 20
 # Hacer otra versión del programa, pero esta vez almacenado todo en una única
-# variable con formato DDMMAAA.
+# variable con formato DDMMAAAA.
+print("Ingrese su fecha de nacimiento: ")
+dia_nacimiento = int(input("día (dd): "))
+mes_nacimiento = int(input("mes (mm): "))
+anio_nacimiento = int(input("año (aaaa): "))
+print(type(dia_nacimiento))
+
+if len(str(dia_nacimiento)) < 2:
+    dia_nacimiento = "0" + str(dia_nacimiento)
+
+if len(str(mes_nacimiento)) < 2:
+    mes_nacimiento = "0" + str(mes_nacimiento)
+
+fecha_con_formato = f"{dia_nacimiento}{mes_nacimiento}{anio_nacimiento}"
+
+print(f"La fecha de nacimiento es: {fecha_con_formato}")
 
 # Ejercicio 21
 # Una pareja de motociclistas necesita hacer ciertos cálculos antes de
@@ -201,3 +300,14 @@ print(f"La calificación final del alumno es: {calificacion_total}")
 # kilómetros en total recorrerán.
 # Hacer un programa que solicite los datos necesarios y luego informe la
 # cantidad de tanques de combustible necesarios.
+kilometros_por_litro = float(input("Kilómetros por litro: "))
+capacidad_del_tanque = float(input("Capacidad (en litros) del tanque:"))
+kilometros_a_recorrer = float(input("Kilómetros a recorrer: "))
+
+autonomia_tanque = kilometros_por_litro * capacidad_del_tanque
+
+tanques_de_combustible = m.ceil(kilometros_a_recorrer / autonomia_tanque)
+
+print(
+    "Cantidad de tanques de combustible necesarios: " + str(int(tanques_de_combustible))
+)
