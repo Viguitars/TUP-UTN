@@ -6,40 +6,95 @@
 # Crear un programa que reciba el número de años que tiene nuestra computadora
 # y muestre en la consola que el computador es nuevo si es menor o igual a 2
 # años y que el computador es viejo si es mayor a 2 años.
+anios_computador1 = int(input("Número de años del computador: "))
+
+ESTADO_COMPUTADOR = (
+    "El computador es nuevo." if anios_computador1 <= 2 else "El computador es viejo."
+)
+
+print(ESTADO_COMPUTADOR)
 
 # Ejercicio 2
 # Hacer que el programa anterior muestre un mensaje de error si el usuario
 # digita un número negativo.
+anios_computador2 = int(input("Número de años del computador: "))
+
+if anios_computador2 < 0:
+    print("Error. Ingrese un número positivo.")
+elif anios_computador2 <= 2:
+    print("El computador es nuevo.")
+else:
+    print("El computador es viejo.")
 
 # Ejercicio 3
 # Solicitar al usuario que ingrese los nombres de dos personas, los cuales se
 # almacenarán en dos variables. A continuación. Imprimir ‘coincidencia’ si
 # ambos nombres comienzan con la misma letra. Si no es así, imprimir ‘no hay
 # coincidencia’.
+NOMBRE_1 = str(input("Nombre de la primer persona: ")).upper()
+NOMBRE_2 = str(input("Nombre de la segunda persona: ")).upper()
+
+ES_MISMA_LETRA = (
+    "Coincidencia." if NOMBRE_1[0] == NOMBRE_2[0] else "No hay coincidencia."
+)
+
+print(ES_MISMA_LETRA)
 
 # Ejercicio 4
 # Crear un programa que permita al usuario elegir un candidato por el cual
 # votar. Las posibilidades son: candidato A por el partido rojo, candidato B
-# por el partido verdad, candidato C por el partido azul.
+# por el partido verde, candidato C por el partido azul.
 # Según el candidato elegido (A, B o C) se debe imprimir el mensaje: ‘Usted ha
 # votado por el partido [color del candidato elegido].
 # Si el usuario ingresa una opción que no corresponde a ninguno de los
 # candidatos disponibles, indicar ‘Opción errónea.’
+CANDIDATO_A_VOTAR = str(input("Candidato a votar (A), (B) o (C): ")).upper()
+
+if CANDIDATO_A_VOTAR == "A":
+    print("Usted ha votado por el partido rojo")
+elif CANDIDATO_A_VOTAR == "B":
+    print("Usted ha votado por el partido verde")
+elif CANDIDATO_A_VOTAR == "C":
+    print("Usted ha votado por el partido azul")
+else:
+    print("Opción errónea")
 
 # Ejercicio 5
 # Escribir un programa que solicite al usuario una letra, si es una vocal,
 # mostrar el mensaje ‘Es vocal’.
 # Se debe validar que el usuario ingrese sólo un carácter. Si ingresa un
 # string de más de un carácter, informarle que no se puede procesar el dato.
+LETRA = str(input("Ingrese una letra: ")).lower()
+VOCALES = "aeiou"
+
+if len(LETRA) == 1:
+    if LETRA in VOCALES:
+        print("Es vocal.")
+else:
+    print("Error. No se puede procesar el dato.")
 
 # Ejercicio 6
 # Hacer un programa que permita saber si un año es bisiesto. Para que un año
 # sea bisiesto debe ser divisible por 4 y no debe ser divisible por 100,
 # excepto que también sea divisible por 400.
+anio = int(input("Ingrese el año: "))
+
+if (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0):
+    print(f"El {anio} es bisiesto.")
+else:
+    print(f"El {anio} no es bisiesto.")
+
 
 # Ejercicio 7
 # Escribí un programa para solicitar al usuario tres números y mostrar en
 # pantalla al menor de los tres.
+num1 = int(input("Ingrese el primer número: "))
+num2 = int(input("Ingrese el segundo número: "))
+num3 = int(input("Ingrese el tercer número: "))
+
+menor_num = min(num1, num2, num3)
+
+print(f"El menor número ingresado es: {menor_num}")
 
 # Ejercicio 8
 # Escribí un programa que solicite ingresar un nombre de usuario y una
@@ -47,6 +102,16 @@
 # mostrar en pantalla “Usuario y contraseña correctos. Puede ingresar a
 # Camelot”. Si el nombre o la contraseña no coinciden, mostrar “Acceso
 # denegado”.
+NOMBRE_USUARIO = str(input("Ingrese el nombre de usuario: "))
+CONTRASENIA = str(input("Ingrese la contraseña: "))
+
+MENSAJE_INGRESO = (
+    "Usuario y contraseña correctos. Puede ingresar a Camelot"
+    if NOMBRE_USUARIO == "Gwenevere" and CONTRASENIA == "excalibur"
+    else "Acceso denegado"
+)
+
+print(MENSAJE_INGRESO)
 
 # Ejercicio 9
 # Los alumnos de un curso se han dividido en dos grupos A y B de acuerdo al
