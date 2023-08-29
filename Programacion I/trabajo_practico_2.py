@@ -158,11 +158,64 @@ print(f"El costo de ingreso es: ${precio_entrada}")
 # mozzarella y el tomate que están en todas la pizzas. Al final se debe
 # mostrar por pantalla si la pizza elegida es vegetariana o no y todos los
 # ingredientes que lleva.
+ingredientes_vegetarianos = ["Pimiento", "Tofu"]
+ingredientes_no_vegetarianos = ["Peperoni", "Jamón", "Salmón"]
+ingredientes_pizza = ["Mozzarella", "Tomate"]
+
+opcion = str(input("¿Desea una pizza vegetariana? (Si/No): ")).lower()
+
+if opcion == "si":
+    print(
+        "Los ingredientes disponibles son: "
+        + str(ingredientes_vegetarianos[0])
+        + " y "
+        + str(ingredientes_vegetarianos[1])
+        + "."
+    )
+    ingrediente_elegido = str(input("Elija el ingrediente: "))
+    es_vegetariano = True
+else:
+    print(
+        "Los ingredientes disponibles son: "
+        + str(ingredientes_no_vegetarianos[0])
+        + ", "
+        + str(ingredientes_no_vegetarianos[1])
+        + " y "
+        + str(ingredientes_no_vegetarianos[2])
+        + "."
+    )
+    ingrediente_elegido = str(input("Elija el ingrediente: "))
+    es_vegetariano = False
+
+if es_vegetariano:
+    print("La pizza elegida es vegetariana.")
+else:
+    print("La pizza elegida no es vegetariana.")
+
+print(
+    "Sus ingredientes son: "
+    + str(ingredientes_pizza[0])
+    + ", "
+    + str(ingredientes_pizza[1])
+    + " y "
+    + str(ingrediente_elegido)
+    + "."
+)
 
 # Ejercicio 12
 # Escriba un programa que pida el año actual y un año cualquiera y que escriba
 # cuántos años han pasado desde ese año o cuántos años faltan para llegar a
 # ese año.
+anio_actual = int(input("Año actual: "))
+anio_cualquiera = int(input("Año cualquiera: "))
+
+distancia_anios = (
+    f"Han pasado {anio_actual - anio_cualquiera} años desde {anio_cualquiera}."
+    if anio_actual > anio_cualquiera
+    else f"Faltan {anio_cualquiera - anio_actual} para llegar a {anio_cualquiera}."
+)
+
+print(distancia_anios)
 
 # Ejercicio 13
 # Escriba un programa que pida dos números enteros y que escriba si el mayor
