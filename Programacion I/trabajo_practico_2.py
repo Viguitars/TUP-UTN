@@ -8,11 +8,11 @@
 # años y que el computador es viejo si es mayor a 2 años.
 anios_computador1 = int(input("Número de años del computador: "))
 
-ESTADO_COMPUTADOR = (
+estado_computador = (
     "El computador es nuevo." if anios_computador1 <= 2 else "El computador es viejo."
 )
 
-print(ESTADO_COMPUTADOR)
+print(estado_computador)
 
 # Ejercicio 2
 # Hacer que el programa anterior muestre un mensaje de error si el usuario
@@ -31,14 +31,14 @@ else:
 # almacenarán en dos variables. A continuación. Imprimir ‘coincidencia’ si
 # ambos nombres comienzan con la misma letra. Si no es así, imprimir ‘no hay
 # coincidencia’.
-NOMBRE_1 = str(input("Nombre de la primer persona: ")).upper()
-NOMBRE_2 = str(input("Nombre de la segunda persona: ")).upper()
+nombre_1 = str(input("Nombre de la primer persona: ")).upper()
+nombre_2 = str(input("Nombre de la segunda persona: ")).upper()
 
-ES_MISMA_LETRA = (
-    "Coincidencia." if NOMBRE_1[0] == NOMBRE_2[0] else "No hay coincidencia."
+es_misma_letra = (
+    "Coincidencia." if nombre_1[0] == nombre_2[0] else "No hay coincidencia."
 )
 
-print(ES_MISMA_LETRA)
+print(es_misma_letra)
 
 # Ejercicio 4
 # Crear un programa que permita al usuario elegir un candidato por el cual
@@ -48,13 +48,13 @@ print(ES_MISMA_LETRA)
 # votado por el partido [color del candidato elegido].
 # Si el usuario ingresa una opción que no corresponde a ninguno de los
 # candidatos disponibles, indicar ‘Opción errónea.’
-CANDIDATO_A_VOTAR = str(input("Candidato a votar (A), (B) o (C): ")).upper()
+candidato_a_votar = str(input("Candidato a votar (A), (B) o (C): ")).upper()
 
-if CANDIDATO_A_VOTAR == "A":
+if candidato_a_votar == "A":
     print("Usted ha votado por el partido rojo")
-elif CANDIDATO_A_VOTAR == "B":
+elif candidato_a_votar == "B":
     print("Usted ha votado por el partido verde")
-elif CANDIDATO_A_VOTAR == "C":
+elif candidato_a_votar == "C":
     print("Usted ha votado por el partido azul")
 else:
     print("Opción errónea")
@@ -64,11 +64,11 @@ else:
 # mostrar el mensaje ‘Es vocal’.
 # Se debe validar que el usuario ingrese sólo un carácter. Si ingresa un
 # string de más de un carácter, informarle que no se puede procesar el dato.
-LETRA = str(input("Ingrese una letra: ")).lower()
-VOCALES = "aeiou"
+letra = str(input("Ingrese una letra: ")).lower()
+vocales = "aeiou"
 
-if len(LETRA) == 1:
-    if LETRA in VOCALES:
+if len(letra) == 1:
+    if letra in vocales:
         print("Es vocal.")
 else:
     print("Error. No se puede procesar el dato.")
@@ -102,16 +102,16 @@ print(f"El menor número ingresado es: {menor_num}")
 # mostrar en pantalla “Usuario y contraseña correctos. Puede ingresar a
 # Camelot”. Si el nombre o la contraseña no coinciden, mostrar “Acceso
 # denegado”.
-NOMBRE_USUARIO = str(input("Ingrese el nombre de usuario: "))
-CONTRASENIA = str(input("Ingrese la contraseña: "))
+nombre_usuario = str(input("Ingrese el nombre de usuario: "))
+contrasenia = str(input("Ingrese la contraseña: "))
 
-MENSAJE_INGRESO = (
+mensaje_ingreso = (
     "Usuario y contraseña correctos. Puede ingresar a Camelot"
-    if NOMBRE_USUARIO == "Gwenevere" and CONTRASENIA == "excalibur"
+    if nombre_usuario == "Gwenevere" and contrasenia == "excalibur"
     else "Acceso denegado"
 )
 
-print(MENSAJE_INGRESO)
+print(mensaje_ingreso)
 
 # Ejercicio 9
 # Los alumnos de un curso se han dividido en dos grupos A y B de acuerdo al
@@ -119,11 +119,11 @@ print(MENSAJE_INGRESO)
 # anterior a la M y los hombres con un nombre posterior a la N y el grupo B
 # por el resto. Escribir un programa que pregunte al usuario su nombre y sexo,
 # y muestre por pantalla el grupo que le corresponde.
-NOMBRE_USUARIO = str(input("Nombre de usuario: ")).upper()
-SEXO_USUARIO = str(input("Sexo usuario (M para mujer, H para hombre): ")).upper()
+nombre_usuario = str(input("Nombre de usuario: ")).upper()
+sexo_usuario = str(input("Sexo usuario (M para mujer, H para hombre): ")).upper()
 
-if (SEXO_USUARIO == "M" and NOMBRE_USUARIO < "M") or (
-    SEXO_USUARIO == "H" and NOMBRE_USUARIO > "N"
+if (sexo_usuario == "M" and nombre_usuario < "M") or (
+    sexo_usuario == "H" and nombre_usuario > "N"
 ):
     print("Corresponde al Grupo A")
 else:
@@ -136,16 +136,16 @@ else:
 # cliente y mostrar el precio de la entrada. Si el cliente es menor de 4 años
 # puede entrar gratis, si tiene entre 4 y 18 años debe pagar $500 y si es
 # mayor de 18 años, $1000.
-EDAD_CLIENTE = int(input("Edad del cliente: "))
+edad_cliente = int(input("Edad del cliente: "))
 
-if EDAD_CLIENTE < 4:
-    PRECIO_ENTRADA = 0
-elif EDAD_CLIENTE >= 4 and EDAD_CLIENTE <= 18:
-    PRECIO_ENTRADA = 500
+if edad_cliente < 4:
+    precio_entrada = 0
+elif edad_cliente >= 4 and edad_cliente <= 18:
+    precio_entrada = 500
 else:
-    PRECIO_ENTRADA = 1000
+    precio_entrada = 1000
 
-print(f"El costo de ingreso es: ${PRECIO_ENTRADA}")
+print(f"El costo de ingreso es: ${precio_entrada}")
 
 # Ejercicio 11
 # La pizzería Bella Napoli ofrece pizzas vegetarianas y no vegetarianas a sus
