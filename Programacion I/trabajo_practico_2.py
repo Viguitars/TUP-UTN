@@ -119,6 +119,15 @@ print(MENSAJE_INGRESO)
 # anterior a la M y los hombres con un nombre posterior a la N y el grupo B
 # por el resto. Escribir un programa que pregunte al usuario su nombre y sexo,
 # y muestre por pantalla el grupo que le corresponde.
+NOMBRE_USUARIO = str(input("Nombre de usuario: ")).upper()
+SEXO_USUARIO = str(input("Sexo usuario (M para mujer, H para hombre): ")).upper()
+
+if (SEXO_USUARIO == "M" and NOMBRE_USUARIO < "M") or (
+    SEXO_USUARIO == "H" and NOMBRE_USUARIO > "N"
+):
+    print("Corresponde al Grupo A")
+else:
+    print("Corresponde al Grupo B")
 
 # Ejercicio 10
 # Escribir un programa para una empresa que tiene salas de juegos para todas
@@ -127,12 +136,22 @@ print(MENSAJE_INGRESO)
 # cliente y mostrar el precio de la entrada. Si el cliente es menor de 4 años
 # puede entrar gratis, si tiene entre 4 y 18 años debe pagar $500 y si es
 # mayor de 18 años, $1000.
+EDAD_CLIENTE = int(input("Edad del cliente: "))
+
+if EDAD_CLIENTE < 4:
+    PRECIO_ENTRADA = 0
+elif EDAD_CLIENTE >= 4 and EDAD_CLIENTE <= 18:
+    PRECIO_ENTRADA = 500
+else:
+    PRECIO_ENTRADA = 1000
+
+print(f"El costo de ingreso es: ${PRECIO_ENTRADA}")
 
 # Ejercicio 11
 # La pizzería Bella Napoli ofrece pizzas vegetarianas y no vegetarianas a sus
 # clientes. Los ingredientes para cada tipo de pizza aparecen a continuación.
-#           Ingredientes vegetarianos: Pimiento y tofu.
-#           Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
+#          - Ingredientes vegetarianos: Pimiento y tofu.
+#          - Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
 # Escribir un programa que pregunte al usuario si quiere una pizza vegetariana
 # o no, y en función de su respuesta le muestre un menú con los ingredientes
 # disponibles para que elija. Solo se puede elegir un ingrediente además de la
