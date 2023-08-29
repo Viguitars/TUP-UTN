@@ -33,31 +33,31 @@ solicitar al usuario que ingrese la cantidad de alumnos del nuevo ciclo y el
 arancel en $ por cada alumno, para luego imprimir el ingreso total en $. """
 
 
-FECHA = str(input("Ingrese la fecha actual en formato 'dìa, DD/MM': "))
-DIA_SEMANA = FECHA[0 : FECHA.find(",")].lower()
-DIA = int(FECHA[FECHA.find(" ") + 1 : FECHA.find("/")])
-MES = int(FECHA[FECHA.find("/") + 1 :])
-SEMANA = ["lunes", "martes", "miercoles", "jueves", "viernes"]
-DIAS_EXAMEN = SEMANA[:3]
+fecha = str(input("Ingrese la fecha actual en formato 'dìa, DD/MM': "))
+dia_semana = fecha[0 : fecha.find(",")].lower()
+dia = int(fecha[fecha.find(" ") + 1 : fecha.find("/")])
+mes = int(fecha[fecha.find("/") + 1 :])
+semana = ["lunes", "martes", "miercoles", "jueves", "viernes"]
+dias_examen = semana[:3]
 
-if DIA_SEMANA not in SEMANA or DIA > 31 or MES > 12:
+if dia_semana not in semana or dia > 31 or mes > 12:
     print("La fecha ingresada es incorrecta.")
 else:
-    if DIA_SEMANA in DIAS_EXAMEN:
+    if dia_semana in dias_examen:
         examenes = input(print("¿Hubo exámen? (Sí/NO): ")).lower()
         if examenes == "si":
             aprobados = int(input("Cantidad de alumnos aprobados: "))
             desaprobados = int(input("Cantidad de alumnos desaprobados: "))
             porcentaje_aprobados = aprobados / (aprobados + desaprobados) * 100
             print(f"Porcentaje de aprobados: {porcentaje_aprobados}%")
-    elif DIA_SEMANA == "jueves":
+    elif dia_semana == "jueves":
         asistencia = float(input("Porcentaje de asistencia a práctica hablada:"))
         if asistencia > 50:
             print("Asistió la mayoría")
         else:
             print("No asistió la mayoría")
-    elif DIA_SEMANA == "viernes":
-        if DIA == 1 and (MES == 1 or MES == 7):
+    elif dia_semana == "viernes":
+        if dia == 1 and (mes == 1 or mes == 7):
             print("Comienzo de nuevo ciclo")
             cantidad_alumnos = int(input("Cantidad de alumnos del nuevo ciclo: "))
             arancel = int(input("Arancel por alumno en $: "))
