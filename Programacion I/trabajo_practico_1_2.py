@@ -111,10 +111,10 @@ print(f"{minutos_totales} minutos son: {horas} horas y {minutos} minutos.")
 # comisiones por las tres ventas que realiza en el mes y el total que recibirá
 # en el mes tomando en cuenta su sueldo base y comisiones.
 sueldo_base = float(input("Ingrese sueldo base: "))
-VENTAS = 3
-COMISION_VENTAS = 0.1
+ventas = 3
+comision_ventas = 0.1
 
-comisiones = sueldo_base * COMISION_VENTAS * VENTAS
+comisiones = sueldo_base * comision_ventas * ventas
 total_mes = sueldo_base + comisiones
 
 print(f"El vendedor recibe en concepto de comisiones: ${comisiones}")
@@ -124,8 +124,8 @@ print(f"El vendedor recibe un sueldo total de: ${total_mes}")
 # Una tienda ofrece un descuento del 15% sobre el total de la compra y un
 # cliente desea saber cuanto deberá pagar finalmente por su compra.
 total_compra = float(input("Ingrese el valor de la compra: "))
-PORCENTAJE_DESCUENTO = 0.15
-descuento = total_compra * PORCENTAJE_DESCUENTO
+porcentaje_descuento = 0.15
+descuento = total_compra * porcentaje_descuento
 total_a_pagar = total_compra - descuento
 
 print(f"El valor total de la compra es de: ${total_a_pagar}")
@@ -214,16 +214,16 @@ print(
 
 # Ejercicio 16
 # Pedir el nombre y los dos apellidos de una persona y mostrar las iniciales.
-NOMBRE_COMPLETO = str(input("Ingrese el nombres y sus dos apellidos: ")).upper()
+nombre_completo = str(input("Ingrese el nombres y sus dos apellidos: ")).upper()
 
-lista_nombre = NOMBRE_COMPLETO.split()
+lista_nombre = nombre_completo.split()
 primer_inicial = lista_nombre[0][:1]
 segunda_inicial = lista_nombre[1][:1]
 tercer_inicial = lista_nombre[2][:1]
 
 print(
     "Las iniciales de "
-    + str(NOMBRE_COMPLETO)
+    + str(nombre_completo)
     + " son: "
     + str(primer_inicial)
     + " - "
@@ -236,19 +236,19 @@ print(
 # Solicitar al usuario que ingrese su nombre. El nombre se debe almacenar en
 # una variable llamada usuario. A continuación mostrar por pantalla: “Ahora
 # estás en la matrix, [nombre del usuario]”.
-NOMBRE_DEL_USUARIO = str(input("Ingrese su nombre: "))
+nombre_del_usuario = str(input("Ingrese su nombre: "))
 
-print(f"Ahora estás en la matrix, {NOMBRE_DEL_USUARIO}.")
+print(f"Ahora estás en la matrix, {nombre_del_usuario}.")
 
 # Ejercicio 18
 # Hacer un programa que solicite al usuario cuánto costó una cena en un
 # restaurante. A ese valor, sumarle un 6.2% en concepto de servicio y un 10%
 # de propina. Imprimir en pantalla el monto final a pagar.
 costo_de_cena = float(input("Ingrese el costo de la cena: "))
-SERVICIO = 0.062
-PROPINA = 0.1
+porcentaje_servicio = 0.062
+porcentaje_propina = 0.1
 
-monto_final = costo_de_cena + costo_de_cena * (SERVICIO + PROPINA)
+monto_final = costo_de_cena + costo_de_cena * (porcentaje_servicio + porcentaje_propina)
 
 print(f"El monto final a pagar es de: ${monto_final}")
 
