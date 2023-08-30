@@ -1,5 +1,5 @@
 """ cSpell: disable """
-import math as m
+import math
 
 # TRABAJO PRACTICO 1.2
 
@@ -306,7 +306,7 @@ kilometros_a_recorrer = float(input("Kilómetros a recorrer: "))
 
 autonomia_tanque = kilometros_por_litro * capacidad_del_tanque
 
-tanques_de_combustible = m.ceil(kilometros_a_recorrer / autonomia_tanque)
+tanques_de_combustible = math.ceil(kilometros_a_recorrer / autonomia_tanque)
 
 print(
     "Cantidad de tanques de combustible necesarios: " + str(int(tanques_de_combustible))
