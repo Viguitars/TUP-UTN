@@ -1,4 +1,5 @@
 """cSpell:disable"""
+import math
 
 # TRABAJO PRACTICO 2
 
@@ -221,6 +222,18 @@ print(distancia_anios)
 # Escriba un programa que pida dos números enteros y que escriba si el mayor
 # es múltiplo del menor. Haciendo que el programa avise cuando se escriben
 # valores negativos o nulos.
+num1 = int(input("Primer número: "))
+num2 = int(input("Segundo número: "))
+
+if num1 < 0 or num2 < 0:
+    print("Ingrese valores positivos.")
+else:
+    mayor_num = max(num1, num2)
+    menor_num = min(num1, num2)
+    if mayor_num % menor_num == 0:
+        print(f"El número {mayor_num} es multiplo de {menor_num}.")
+    else:
+        print(f"El número {mayor_num} no es multiplo de {menor_num}.")
 
 # Ejercicio 14
 # Escriba un programa que pida los coeficientes de una ecuación de primer
@@ -228,6 +241,14 @@ print(distancia_anios)
 # Se recuerda que una ecuación de primer grado puede no tener solución, tener
 # una solución única, o que todos los números sean solución. Se recuerda que
 # la fórmula de las soluciones es x = -b / a
+a = float(input("Ingrese el coeficiente 'a' de la ecuación: "))
+b = float(input("Ingrese el coeficiente 'b' de la ecuación: "))
+
+if a == 0:
+    print("El coeficiente 'a' no puede ser cero.")
+else:
+    solucion = -b / a
+    print(f"La solución de la ecuación: {solucion}")
 
 # Ejercicio 15
 # Escriba un programa que pregunte primero si se quiere calcular el área de un
@@ -236,6 +257,21 @@ print(distancia_anios)
 # base y la altura y escribir el área. Si se contesta que se quiere calcular
 # el área de un círculo (escribiendo C o c), el programa tiene que pedir
 # entonces el radio y escribir el área.
+opcion = str(
+    input("¿Quiere calcular el área de un triángulo (T/t) o de un círculo(C/c)?")
+).lower()
+
+if opcion == "t":
+    base = float(input("Ingrese la base del triángulo: "))
+    altura = float(input("Ingrese la altura del triángulo: "))
+    area_triangulo = round((base * altura) / 2, 2)
+    print(f"El área del triángulo es: {area_triangulo}")
+elif opcion == "c":
+    radio = float(input("Ingrese el radio del círculo: "))
+    area_circulo = round(math.pi * radio**2, 2)
+    print(f"El área del círculo es: {area_circulo}")
+else:
+    print("Opción incorrecta.")
 
 # Ejercicio 16
 # Haz una calculadora básica pida al usuario dos valores, a y b.
