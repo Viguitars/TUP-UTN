@@ -274,32 +274,110 @@ else:
     print("Opción incorrecta.")
 
 # Ejercicio 16
-# Haz una calculadora básica pida al usuario dos valores, a y b.
+# Haz una calculadora básica que pida al usuario dos valores, a y b.
 # Según la opción que desean, realizar la operación:
-#   |   Si operación es 1 entonces debemos ver el resultado de a + b
+#       Si operación es 1 entonces debemos ver el resultado de a + b
 #       Si operación es 2 entonces debemos ver el resultado de a * b
 #       Si operación es 3 entonces debemos ver el resultado de a - b
 #       Si operación es 4 entonces debemos ver el resultado de a / b
+valor_a = float(input("Ingrese el valor de 'a': "))
+valor_b = float(input("Ingrese el valor de 'b': "))
+
+opcion = int(
+    input(
+        "Elija la operación que desea realizar: \n"
+        "\t1 - Suma\n"
+        "\t2 - Multiplicación\n"
+        "\t3 - Resta\n"
+        "\t4 - División\n"
+    )
+)
+
+if opcion == 1:
+    resultado = valor_a + valor_b
+    print(f"La suma de {valor_a} y {valor_b} es: {resultado}.")
+elif opcion == 2:
+    resultado = valor_a * valor_b
+    print(f"La multiplicación de {valor_a} y {valor_b} es: {resultado}.")
+elif opcion == 3:
+    resultado = valor_a - valor_b
+    print(f"La resta de {valor_a} y {valor_b} es: {resultado}.")
+elif opcion == 4:
+    resultado = valor_a / valor_b
+    print(f"La división de {valor_a} y {valor_b} es: {resultado}.")
+else:
+    print("Opción incorrecta.")
 
 # Ejercicio 17
 # Requerir al usuario que ingrese un día de la semana e imprimir un mensaje si
 # es lunes, otro mensaje diferente si es viernes, otro mensaje diferente si es
 # sábado o domingo. Si el día ingresado no es ninguno de esos, imprimir otro
 # mensaje.
+dia_semana = str(input("Ingrese un día de la semana: ")).lower()
+
+if dia_semana == "lunes":
+    print("¡Comienza la semana!")
+elif dia_semana == "viernes":
+    print("¡Se termina la semana!")
+elif dia_semana == "sabado" or dia_semana == "domingo":
+    print("¡A descansar!")
+else:
+    print("¡Vamos que se puede!")
 
 # Ejercicio 18
 # Preguntar al usuario el total de horas trabajadas en el mes y el salario por
 # hora. La jornada de trabajo mínima es de 48 horas. Calcular, dadas las horas
-# trabajadas, si trabajó horas extras y mostrar esta cantidad.
-# Mostrar su salario total, tomando en cuenta que las horas extras serán
-# pagadas un 10% más que las horas laborales comunes.
+# trabajadas, si trabajó horas extras y mostrar esta cantidad. Mostrar su
+# salario total, tomando en cuenta que las horas extras serán pagadas un 10%
+# más que las horas laborales comunes.
+horas_trabajadas = float(input("Ingrese el total de horas trabajadas en el mes: "))
+salario_por_hora = float(input("Ingrese el salario por hora: "))
+
+jornada_minima = 48
+
+if horas_trabajadas > jornada_minima:
+    horas_extras = horas_trabajadas - jornada_minima
+    salario_total = (jornada_minima * salario_por_hora) + (
+        horas_extras * salario_por_hora * 1.1
+    )
+else:
+    horas_extras = 0
+    salario_total = horas_trabajadas * salario_por_hora
+
+print(f"Horas extras trabajadas: {horas_extras}")
+print(f"Salario total: ${salario_total:.2f}")
 
 # Ejercicio 19
 # Determinar cuánto se debe pagar por una cantidad de lápices considerando que
 # si son 1000 o más, existe un descuento de 7% y teniendo en cuenta que el
 # costo por lápiz es de $60; de lo contrario no hay descuento.
+cantidad_lapices = int(input("Ingrese la cantidad de lápices: "))
+
+costo_por_lapiz = 60
+descuento = 0.07
+
+if cantidad_lapices >= 1000:
+    total_a_pagar = cantidad_lapices * costo_por_lapiz * (1 - descuento)
+else:
+    total_a_pagar = cantidad_lapices * costo_por_lapiz
+
+print(f"Total a pagar: ${total_a_pagar:.2f}")
+
 
 # Ejercicio 20
 # Determinar si un alumno aprueba o reprueba un curso, sabiendo que aprobara
 # si su promedio de cuatro (4) notas, es mayor o igual a 6; caso contrario
 # saldrá desaprobado.
+nota1 = float(input("Ingrese la primera nota: "))
+nota2 = float(input("Ingrese la segunda nota: "))
+nota3 = float(input("Ingrese la tercera nota: "))
+nota4 = float(input("Ingrese la cuarta nota: "))
+
+promedio = (nota1 + nota2 + nota3 + nota4) / 4
+
+if promedio >= 6:
+    resultado = "Aprobado"
+else:
+    resultado = "Reprobado"
+
+print(f"El alumno está {resultado} con un promedio de {promedio:.2f}")
