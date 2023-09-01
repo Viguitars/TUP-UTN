@@ -1,4 +1,4 @@
-# cSpell: disable
+""" cSpell: disable """
 
 # EJERCICIOS EN CLASE FOR - WHILE
 
