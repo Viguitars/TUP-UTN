@@ -146,7 +146,7 @@ elif edad_cliente >= 4 and edad_cliente <= 18:
 else:
     precio_entrada = 1000
 
-print(f"El costo de ingreso es: ${precio_entrada}")
+print(f"El costo de ingreso es: ${precio_entrada:.2f}")
 
 # Ejercicio 11
 # La pizzería Bella Napoli ofrece pizzas vegetarianas y no vegetarianas a sus
@@ -330,22 +330,19 @@ else:
 # trabajadas, si trabajó horas extras y mostrar esta cantidad. Mostrar su
 # salario total, tomando en cuenta que las horas extras serán pagadas un 10%
 # más que las horas laborales comunes.
-horas_trabajadas = float(input("Ingrese el total de horas trabajadas en el mes: "))
-salario_por_hora = float(input("Ingrese el salario por hora: "))
+horas_trabajadas = float(input("Ingrese las horas trabajadas: "))
+salario_por_hora = float(input("Ingrese el salario por hora que cobra: "))
 
-jornada_minima = 48
-
-if horas_trabajadas > jornada_minima:
-    horas_extras = horas_trabajadas - jornada_minima
-    salario_total = (jornada_minima * salario_por_hora) + (
-        horas_extras * salario_por_hora * 1.1
-    )
+if horas_trabajadas >= 48:
+    horas_extras = horas_trabajadas - 48
 else:
     horas_extras = 0
-    salario_total = horas_trabajadas * salario_por_hora
 
-print(f"Horas extras trabajadas: {horas_extras}")
-print(f"Salario total: ${salario_total:.2f}")
+salario_horas_extras = horas_extras * salario_por_hora * 1.10
+salario_total = (48 * salario_por_hora) + salario_horas_extras
+
+print(f"Horas extras trabajadas: {horas_extras}.")
+print(f"Salario total: ${salario_total:.2f}.")
 
 # Ejercicio 19
 # Determinar cuánto se debe pagar por una cantidad de lápices considerando que
@@ -361,23 +358,22 @@ if cantidad_lapices >= 1000:
 else:
     total_a_pagar = cantidad_lapices * costo_por_lapiz
 
-print(f"Total a pagar: ${total_a_pagar:.2f}")
-
+print(f"El total a pagar es: ${total_a_pagar:.2f}")
 
 # Ejercicio 20
 # Determinar si un alumno aprueba o reprueba un curso, sabiendo que aprobara
 # si su promedio de cuatro (4) notas, es mayor o igual a 6; caso contrario
 # saldrá desaprobado.
-nota1 = float(input("Ingrese la primera nota: "))
-nota2 = float(input("Ingrese la segunda nota: "))
-nota3 = float(input("Ingrese la tercera nota: "))
-nota4 = float(input("Ingrese la cuarta nota: "))
+nota1 = float(input("Ingrese primer nota: "))
+nota2 = float(input("Ingrese segunda nota: "))
+nota3 = float(input("Ingrese tercer nota: "))
+nota4 = float(input("Ingrese cuarta nota: "))
 
-promedio = (nota1 + nota2 + nota3 + nota4) / 4
+promedio_notas = (nota1 + nota2 + nota3 + nota4) / 4
 
-if promedio >= 6:
-    resultado = "Aprobado"
+if promedio_notas >= 6:
+    resultado = "aprobado"
 else:
-    resultado = "Reprobado"
+    resultado = "desaprobado"
 
-print(f"El alumno está {resultado} con un promedio de {promedio:.2f}")
+print(f"¡Alumno {resultado} con promedio de {promedio_notas:.2f}!")
