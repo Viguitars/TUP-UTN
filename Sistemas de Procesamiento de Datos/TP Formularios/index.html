@@ -10,114 +10,95 @@
 		<h1>Formulario de Carga de Datos</h1>
 		<form action="">
 			<fieldset>
-				<label for="apellido"
-					>Apellido<input id="apellido" name="apellido" type="text" required
-				/></label>
-				<label for="nombre"
-					>Nombre<input id="nombre" name="nombre" type="text" required
-				/></label>
-				<label for="dni"
-					>D.N.I.<input id="dni" name="dni" type="number" />
-				</label>
-				<label for="fechaDeNacimiento"
-					>Fecha de Nacimiento<input
-						id="fechaDeNacimiento"
-						name="fechaDeNacimiento"
-						type="date"
-						required
-					/>
-				</label>
-				<label for="domicilio"
-					>Domicilio<input id="domicilio" name="domicilio" type="text" required
-				/></label>
-				<label for="localidad"
-					>Localidad<input
-						id="localidad"
-						name="localidad"
-						type="text"
-						required
-					/>
-				</label>
+				<label for="apellido">Apellido</label>
+				<input id="apellido" name="apellido" type="text" required />
+				<label for="nombre">Nombre</label>
+				<input id="nombre" name="nombre" type="text" required />
+				<label for="dni">D.N.I. </label>
+				<input id="dni" name="dni" type="number" />
+				<label for="fechaDeNacimiento">Fecha de Nacimiento </label>
+				<input
+					id="fechaDeNacimiento"
+					name="fechaDeNacimiento"
+					type="date"
+					required
+				/>
+				<label for="domicilio">Domicilio</label>
+				<input id="domicilio" name="domicilio" type="text" required />
+				<label for="localidad">Localidad </label>
+				<input id="localidad" name="localidad" type="text" required />
 			</fieldset>
 			<fieldset>
 				<h3>Idiomas que conoce</h3>
 				<p>Nivel de conocimiento</p>
-				<label for="español"
-					>Español
-					<input
-						id="español"
-						name="español"
-						type="checkbox"
-						required
-						class="inline"
-					/>
-					<input
-						id="nivelEspañol"
-						name="nivelEspañol"
-						type="range"
-						list="mydata"
-						min="0"
-						max="100"
-						step="25"
-					/>
-				</label>
-				<label for="ingles"
-					>Inglés
-					<input
-						id="ingles"
-						name="ingles"
-						type="checkbox"
-						required
-						class="inline"
-					/>
-					<input
-						id="nivelIngles"
-						name="nivelIngles"
-						type="range"
-						list="mydata"
-						min="0"
-						max="100"
-						step="25"
-					/>
-				</label>
-				<label for="frances"
-					>Francés
-					<input
-						id="frances"
-						name="frances"
-						type="checkbox"
-						required
-						class="inline"
-					/>
-					<input
-						id="nivelFrances"
-						name="nivelFrances"
-						type="range"
-						list="mydata"
-						min="0"
-						max="100"
-						step="25"
-					/>
-				</label>
-				<label for="chino"
-					>Chino
-					<input
-						id="chino"
-						name="chino"
-						type="checkbox"
-						required
-						class="inline"
-					/>
-					<input
-						id="nivelChino"
-						name="nivelChino"
-						type="range"
-						list="mydata"
-						min="0"
-						max="100"
-						step="25"
-					/>
-				</label>
+				<label for="español">Español </label>
+				<input
+					id="español"
+					name="español"
+					type="checkbox"
+					required
+					class="inline"
+				/>
+				<input
+					id="nivelEspañol"
+					name="nivelEspañol"
+					type="range"
+					list="mydata"
+					min="0"
+					max="100"
+					step="25"
+				/>
+				<label for="ingles">Inglés </label>
+				<input
+					id="ingles"
+					name="ingles"
+					type="checkbox"
+					required
+					class="inline"
+				/>
+				<input
+					id="nivelIngles"
+					name="nivelIngles"
+					type="range"
+					list="mydata"
+					min="0"
+					max="100"
+					step="25"
+				/>
+				<label for="frances">Francés </label>
+				<input
+					id="frances"
+					name="frances"
+					type="checkbox"
+					required
+					class="inline"
+				/>
+				<input
+					id="nivelFrances"
+					name="nivelFrances"
+					type="range"
+					list="mydata"
+					min="0"
+					max="100"
+					step="25"
+				/>
+				<label for="chino">Chino </label>
+				<input
+					id="chino"
+					name="chino"
+					type="checkbox"
+					required
+					class="inline"
+				/>
+				<input
+					id="nivelChino"
+					name="nivelChino"
+					type="range"
+					list="mydata"
+					min="0"
+					max="100"
+					step="25"
+				/>
 				<datalist id="mydata">
 					<option value="0"></option>
 					<option value="25"></option>
@@ -129,5 +110,6 @@
 			<input type="submit" value="Enviar" />
 			<input type="reset" value="Borrar" />
 		</form>
+		<script src="formulario.js"></script>
 	</body>
 </html>
