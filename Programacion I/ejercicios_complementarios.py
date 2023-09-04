@@ -92,5 +92,5 @@ nombre_lower = nombre_upper.lower()
 print(nombre_lower)
 # 16. Por último, con la variable con el nombre en mayúsculas, aplica un método
 # parecido para que se transforme todo en minúsculas excepto la primera letra.
-nombre_upper = nombre_lower.upper()
-print(nombre_upper)
+nombre = nombre_lower.title()
+print(nombre)
