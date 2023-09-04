@@ -22,24 +22,41 @@ for i in range(1, age + 1):
 # Escribir un programa que pida al usuario un número entero positivo y muestre
 # por pantalla todos los números impares desde 1 hasta ese número separados
 # por comas.
-number = int(input("Ingrese un número estero positivo: "))
-resultado = ""
+number = int(input("Ingrese un número entero positivo: "))
+odd_numbers = ""
 
 if number <= 0:
-    print("Ingrese un número entero positivo.")
+    print("Error: Ingrese un número entero positivo.")
 else:
     for i in range(1, number + 1):
         if i % 2 != 0:
-            resultado += str(i) + ", "
+            odd_numbers += str(i) + ", "
 
-print(f"Los números impares del 1 al {str(number)} son: {resultado[:-2]}.")
+print(f"Los números impares del 1 al {str(number)} son: {odd_numbers[:-2]}.")
 
 # Escribir un programa que pida al usuario un número entero positivo y muestre
 # por pantalla la cuenta atrás desde ese número hasta cero separados por comas.
+number = int(input("Ingrese un número entero positivo: "))
+countdown = ""
+
+if number <= 0:
+    print("Error: Ingrese un número entero positivo.")
+else:
+    for i in range(number, -1, -1):
+        countdown += str(i) + ", "
+
+print(f"Cuenta atrás desde {str(number)} hasta 0: {countdown [:-2]}.")
 
 # Escribir un programa que pregunte al usuario una cantidad a invertir, el
 # interés anual y el número de años, y muestre por pantalla el capital
 # obtenido en la inversión cada año que dura la inversión.
+amount_to_invest = float(input("Cantidad a invertir: "))
+annual_interest = float(input("Interés anual: "))
+number_of_years = int(input("Cantidad de años: "))
+
+for year in range(1, number_of_years + 1):
+    capital_obtained = amount_to_invest * (1 + annual_interest / 100) ** year
+    print(f"Capital obtenido en {year} año: ${capital_obtained:.2f}")
 
 # Escribir un programa que pida al usuario un número entero y muestre por
 # pantalla un triángulo rectángulo como el de más abajo, de altura el número
@@ -49,9 +66,23 @@ print(f"Los números impares del 1 al {str(number)} son: {resultado[:-2]}.")
 #                                   ***
 #                                   ****
 #                                   *****
+height = int(input("Ingrese un número entero para la altura del triángulo: "))
+asterisk = "*"
+
+if height <= 0:
+    print("Error: Ingrese un número entero positivo.")
+else:
+    for i in range(1, height + 1):
+        print(asterisk * i)
 
 # Escribir un programa que muestre por pantalla las tablas de multiplicar del
 # 1 al 10.
+for multiplicand in range(1, 11):
+    print("**************************************")
+    print(f"Tabla de multiplicación del número {multiplicand}: ")
+    print("**************************************")
+    for multiplier in range(1, 11):
+        print(f"{multiplicand} x {multiplier} = {multiplicand * multiplier}")
 
 # Escribir un programa que pida al usuario un número entero y muestre por
 # pantalla un triángulo rectángulo como el de más abajo.
