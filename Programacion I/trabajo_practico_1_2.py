@@ -275,21 +275,16 @@ print(f"La fecha de nacimiento es: {fecha_con_formato}")
 # Ejercicio 20
 # Hacer otra versión del programa, pero esta vez almacenado todo en una única
 # variable con formato DDMMAAAA.
-print("Ingrese su fecha de nacimiento: ")
-dia_nacimiento = int(input("día (dd): "))
-mes_nacimiento = int(input("mes (mm): "))
-anio_nacimiento = int(input("año (aaaa): "))
-print(type(dia_nacimiento))
+fecha_completa = input("Ingrese su fecha de nacimiento en formato DDMMAAAA: ")
 
-if len(str(dia_nacimiento)) < 2:
-    dia_nacimiento = "0" + str(dia_nacimiento)
-
-if len(str(mes_nacimiento)) < 2:
-    mes_nacimiento = "0" + str(mes_nacimiento)
-
-fecha_con_formato = f"{dia_nacimiento}{mes_nacimiento}{anio_nacimiento}"
-
-print(f"La fecha de nacimiento es: {fecha_con_formato}")
+if len(fecha_completa) != 8:
+    print("Erro. Debe ingresar su fecha de nacimiento en formato DDMMAAAA")
+else:
+    dia_nacimiento = fecha_completa[0:2]
+    mes_nacimiento = fecha_completa[2:4]
+    anio_nacimiento = fecha_completa[4:8]
+    fecha_con_formato = f"{dia_nacimiento}/{mes_nacimiento}/{anio_nacimiento}"
+    print(f"La fecha de nacimiento es: {fecha_con_formato}")
 
 # Ejercicio 21
 # Una pareja de motociclistas necesita hacer ciertos cálculos antes de
