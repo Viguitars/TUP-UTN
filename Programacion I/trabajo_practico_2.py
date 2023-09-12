@@ -244,11 +244,16 @@ else:
 a = float(input("Ingrese el coeficiente 'a' de la ecuación: "))
 b = float(input("Ingrese el coeficiente 'b' de la ecuación: "))
 
-if a == 0:
-    print("El coeficiente 'a' no puede ser cero.")
+if a == 0 and b == 0:
+    print("La solución de la ecuación es infinito.")
+elif a == 0 and b != 0:
+    print("La ecuación no tiene solución.")
 else:
     solucion = -b / a
     print(f"La solución de la ecuación: {solucion}")
+
+""" Comentario de la profesora: Las condiciones matemáticas son que si a==0 y 
+b==0, las soluciones son infinitas, y si a==0 y b!=0 no tiene solución. """
 
 # Ejercicio 15
 # Escriba un programa que pregunte primero si se quiere calcular el área de un
