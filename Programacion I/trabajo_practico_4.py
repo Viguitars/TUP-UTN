@@ -1,5 +1,4 @@
 """cSpell:disable"""
-import math
 
 # TRABAJO PRACTICO 4
 
@@ -21,14 +20,16 @@ x = 0
 
 while x <= 30:
     print(f"The value of the loop is: {x}")
-    x += 1
+
+    if x == 15:
+        print(f"The execution of the loop was broken when x was {x}")
+        break
     if x == 4 or x == 6 or x == 10:
         print(f"The value {x} of x was skipped")
         x += 1
         continue
-    if x == 15:
-        print(f"The execution of the loop was broken when x was {x}")
-        break
+
+    x += 1
 
 # Ejercicio 2
 # Escriba un programa que acepte una secuencia de líneas e imprima todas las
@@ -37,15 +38,16 @@ while x <= 30:
 lines = []
 
 while True:
-    line = str(input("Ingrese una linea o presione enter para salir:  "))
+    line = str(
+        input("Ingrese una linea o presione enter en una línea vacía para finalizar: ")
+    )
+
+    if line == "":
+        print("")
+        break
 
     lines.append(line)
 
-    if len(line) > 0:
-        continue
-    elif line == "":
-        print("")
-        break
 
 for line in lines:
     print(line.upper())
@@ -65,34 +67,36 @@ for line in lines:
 #                           D 50
 # Introducir una línea vacía indica que ha finalizado la bitácora.
 # La salida de éste programa sería: 350
-balance = 0
+total_transactions = 0
 
-print("Ingrese las operaciones en el formato 'D monto' o 'R monto', y presione Enter.")
-print("Presione Enter en una línea vacía para finalizar la bitácora.")
+print(
+    "Ingrese las operaciones con formato 'D monto' para depositos o 'R monto' para retiros."
+)
+print("Presione enter en una línea vacía para finalizar.")
 
 while True:
-    entry = input("Operación: ")
+    transaction = str(input("Operacion: "))
 
-    if entry == "":
+    if transaction == "":
         break
 
-    separate_entry = entry.split()
+    transaction_split = transaction.split()
 
-    if len(separate_entry) != 2:
-        print("Entrada no válida. Debe tener el formato 'D monto' o 'R monto'.")
+    if len(transaction_split) != 2:
+        print("Operación no válida. El formato es 'D monto' y 'R monto'.")
         continue
 
-    operation_type = separate_entry[0]
-    amount = int(separate_entry[1])
+    transaction_type = transaction_split[0]
+    transaction_amount = int(transaction_split[1])
 
-    if operation_type == "D":
-        balance += amount
-    elif operation_type == "R":
-        balance -= amount
+    if transaction_type == "D":
+        total_transactions += transaction_amount
+    elif transaction_type == "R":
+        total_transactions -= transaction_amount
     else:
-        print("Entrada no válida. El tipo de operación debe ser 'D' o 'R'.")
+        print("Operación no válida. El formato es 'D monto' y 'R monto'.")
 
-print("Saldo final:", balance)
+print(f"El monto total de las operacines realizadas es: {total_transactions}")
 
 # Ejercicio 4
 # Escribir un programa que solicite el ingreso de una cantidad indeterminada
@@ -100,28 +104,28 @@ print("Saldo final:", balance)
 # Imprimir la cantidad total de números primos ingresados.
 # Nota: Un número primo es un número natural mayor que 1 que tiene únicamente
 # dos divisores distintos: él mismo y el 1.
-prime_count = 0
+""" Aqui quise probar el uso de errores y excepciones """
+total_primes = 0
+
+print("Ingrese números mayores a 1 o 0 para finalizar.")
 
 while True:
-    num = int(input("Ingrese un número mayor que 1 (0 para finalizar): "))
+    try:
+        number = int(input("Número: "))
 
-    if num == 0:
-        break
-
-    if num <= 1:
-        print("Número no válido. Debe ser mayor que 1.")
-        continue
-
-    is_prime = True
-    for i in range(2, int(num**0.5) + 1):
-        if num % i == 0:
-            is_prime = False
+        if number == 0:
             break
+        elif number < 1:
+            print("Operación invalida. Ingrese números mayores a 1.")
+            continue
 
-    if is_prime:
-        prime_count += 1
+        if number % 2 != 0:
+            total_primes += 1
 
-print("Cantidad de números primos ingresados:", prime_count)
+    except ValueError:
+        print("Error: Debe ingresar un número entero válido. Inténtelo nuevamente.")
+
+print(f"El total de números primos ingresados es {total_primes}.")
 
 # Ejercicio 5
 # Escribir un programa que permita al usuario ingresar dos años y luego
@@ -131,30 +135,33 @@ print("Cantidad de números primos ingresados:", prime_count)
 year1 = int(input("Ingrese el primer año: "))
 year2 = int(input("Ingrese el segundo año: "))
 
-print(f"Años bisiestos y múltiplos de 10 entre {year1} y {year2}:")
-for year in range(year1, year2 + 1):
+start_year = max(year1, year2)
+end_year = min(year1, year2)
+
+print(f"Años bisiestos entre {end_year} y {start_year}:")
+
+for year in range(end_year, start_year + 1):
     if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-        if year % 10 == 0:
-            print(year)
+        print(year)
 
 # Ejercicio 6
 # Escribe un programa que imprima todos los números pares del 1 al 20 usando
 # un bucle for. Utiliza la declaración continue para omitir los números
 # impares.
-for num in range(1, 21):
-    if num % 2 != 0:
+for number in range(1, 21):
+    if number % 2 != 0:
         continue
-    print(num)
+    print(number)
 
 # Ejercicio 7
 # Crea una lista de números y utiliza un bucle for para encontrar un número
 # específico. Cuando encuentres el número, usa break para salir del bucle.
-numbers = [10, 20, 30, 40, 50]
+numbers_list = [10, 20, 30, 40, 50]
+specific_number = 30
 
-target = 30
-for num in numbers:
-    if num == target:
-        print(f"El número {target} fue encontrado.")
+for number in numbers_list:
+    if number == specific_number:
+        print(f"Se encontró el número {specific_number} en {numbers_list}.")
         break
 
 # Ejercicio 8
@@ -162,23 +169,20 @@ for num in numbers:
 # 2, 3). Utiliza un bucle while para permitir al usuario seleccionar una
 # opción. Si el usuario ingresa "0", utiliza break para salir del bucle
 # (Mostrar un mensaje por cada opción elegida).
-print("Menú de opciones:")
-print("1. Opción 1")
-print("2. Opción 2")
-print("3. Opción 3")
-print("0. Salir")
+print("---OPCIONES---")
+print("1. Opción 1.")
+print("2. Opción 2.")
+print("3. Opción 3.")
+print("0. Salir.")
+print("--------------")
+
 
 while True:
-    opcion = input("Seleccione una opción: ")
+    option = int(input("Elija una opción: "))
 
-    if opcion == "0":
-        print("Saliendo del programa.")
+    if option == 0:
         break
-    elif opcion == "1":
-        print("Ha seleccionado la Opción 1.")
-    elif opcion == "2":
-        print("Ha seleccionado la Opción 2.")
-    elif opcion == "3":
-        print("Ha seleccionado la Opción 3.")
+    elif option < 1 or option > 3:
+        print("Ingrese una opción válida.")
     else:
-        print("Opción no válida. Intente de nuevo.")
+        print(f"Usted eligió la Opción {option}.")
