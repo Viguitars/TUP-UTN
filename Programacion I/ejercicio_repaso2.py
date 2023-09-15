@@ -1,8 +1,9 @@
-""" cSpell:disable  """
 import math, random
+
 # Ejercitación de repaso
 
-# 1. Realizar un programa que pida una frase o palabra y si la frase o palabra
+# Ejercitación 1
+# Realizar un programa que pida una frase o palabra y si la frase o palabra
 # es de 4 caracteres de largo, el programa le sumará un signo de exclamación
 # al final, y si no es de 4 caracteres el programa le sumará un signo de
 # interrogación al final. El programa mostrará después la frase final.
@@ -13,49 +14,66 @@ if len(asks) == 4:
 else:
     print(f"{asks}?")
 
-# 2. Crea un juego donde el programa elija una palabra al azar de una lista y
+# Ejercitación 2
+# Crea un juego donde el programa elija una palabra al azar de una lista y
 # el usuario tenga que adivinarla letra por letra. Proporciona un número
 # limitado de intentos y utiliza un bucle while para controlar el juego.
-list_of_words = ["hola", "adios", "mañana", "tarde"]
-random_word = random.choice(list_of_words)
-number_of_tries = len(random_word)*2
-attempt_counter = 0
-word = ""
 
-while attempt_counter < len(random_word)*2:
-    attempts = str(input(f"Tienes {number_of_tries} intentos para adivinar la palabra: "))
-    attempt_counter += 1
-    if attempts in random_word:
-        print(f"La letra '{attempts}' pertenece a la palabra.")
-        attempt_counter += 1
-    else:
-        print(f"La letra '{attempts}' no pertenece a la palabra.")
-        
-        attempt_counter += 1    
-    number_of_tries -= 1
-    print(f"attempt_counter: {attempt_counter}")
-    print(f"numeros de intentos: {len(random_word)*2}")
-
-
-if word in random_word and len(word)== len(random_word):
-    print(f"¡Felicidades! Has adivinado la palabra {random_word}.")
-else:
-    print(f"¡Intentalo Nuevamente! La palabra ha adivinar es: {random_word}.")
-# 3. Escribe un programa que cuente cuántas palabras hay en una cadena de
+# Ejercitación 3
+# Escribe un programa que cuente cuántas palabras hay en una cadena de
 # texto ingresada por el usuario.
+text = str(input("Ingrese una cadena de texto: "))
 
-# 4. Una empresa quiere pagar a sus empleados por la asistencia de lunes a
+count = len(text.split())
+
+print(f"La cantidad de palabras que tiene la cadena de texto es: {count}.")
+
+# Ejercitación 4
+# Una empresa quiere pagar a sus empleados por la asistencia de lunes a
 # viernes y un adicional por las horas trabajadas los domingos en tareas
 # especiales.
 # ✔ El empleado asistió todo el mes, además entre 3 y 5 horas los domingos,
 # adiciona el 3 % del sueldo.
 # ✔ Si asistió todo el mes y entre 6 y 10 horas los domingos, adiciona el 10 %.
 # ✔ No asistió todo el mes y entre 3 y 10 horas los domingos, adiciona el 2 %.
+monthly_attendance = str(input("¿El empleado trabajo todo el mes? (Si/No): ")).lower()
+sunday_hours = int(input("¿Cuantas horas trabajo los domingos?: "))
 
-# 5. Leer 2 números; si son iguales que los multiplique, si el primero es
+base_salary = 250000
+
+if monthly_attendance == "si":
+    if sunday_hours >= 3 and sunday_hours <= 5:
+        additional = 0.03
+    elif sunday_hours >= 6 and sunday_hours <= 10:
+        additional = 0.1
+else:
+    if sunday_hours >= 3 and sunday_hours <= 10:
+        additional = 0.02
+
+total_salary = base_salary + (base_salary * additional)
+
+print(f"El sueldo total es de: ${total_salary:.2f}")
+
+# Ejercitación 5
+# Leer 2 números; si son iguales que los multiplique, si el primero es
 # mayor que el segundo que los reste y si no que los sume.
+number1 = int(input("Ingrese el primer número: "))
+number2 = int(input("Ingrese el segundo número: "))
 
-# 6. El ANSES requiere clasificar a las personas que se jubilaran en el año de
+if number1 > number2:
+    result = number1 - number2
+    operation = "restar"
+elif number1 < number2:
+    result = number1 + number2
+    operation = "sumar"
+else:
+    result = number1 * number2
+    operation = "multiplicar"
+
+print(f"El resultado de {operation} {number1} y {number2} es: {result}.")
+
+# Ejercitación 6
+# El ANSES requiere clasificar a las personas que se jubilaran en el año de
 # 2010. Existen tres tipos de jubilaciones: por edad, por antigüedad joven y
 # por antigüedad adulta.
 # - Las personas adscritas a la jubilación por edad deben tener 60 años o más
@@ -65,8 +83,28 @@ else:
 # - Las personas adscritas a la jubilación por antigüedad adulta deben tener
 # 60 años o más y una antigüedad en su empleo de 25 años o más.
 # Determinar en qué tipo de jubilación, quedara adscrita una persona.
+year_of_birth = int(input("Ingrese el año de nacimiento: "))
+years_of_work = int(input("Ingrese el año inicio laboral: "))
+retirement_year = 2010
+age = retirement_year - year_of_birth
+antiquity = retirement_year - years_of_work
 
-# 7. Calcular la utilidad que un trabajador recibe en el reparto anual de
+if age >= 60:
+    if antiquity < 25:
+        retirement_types = "edad"
+    else:
+        retirement_types = "antigüedad adulta"
+elif age < 60 and antiquity >= 25:
+    retirement_types = "antigüedad joven"
+else:
+    retirement_types = "no corresponde"
+
+print(
+    f"Tipo de jubilación a la que puede adscribir en el año 2010: {retirement_types.upper()}."
+)
+
+# Ejercitación 7
+# Calcular la utilidad que un trabajador recibe en el reparto anual de
 # utilidades si este se le asigna como un porcentaje de su salario mensual que
 # depende de su antigüedad en la empresa de acuerdo con la siguiente tabla:
 # Tiempo Utilidad
@@ -75,3 +113,20 @@ else:
 # 2 años o más y menos de 5 años 10% del salario
 # 5 años o más y menos de 10 años 15% del salario
 # 10 años o más 20% del salario
+salary = float(input("Ingrese el salario mensual: "))
+years_of_service = float(input("Ingrese la antigüedad en la empresa: "))
+
+if years_of_service < 1:
+    utility_percentage = 0.05
+elif years_of_service < 2:
+    utility_percentage = 0.07
+elif years_of_service < 5:
+    utility_percentage = 0.1
+elif years_of_service < 10:
+    utility_percentage = 0.15
+else:
+    utility_percentage = 0.2
+
+utility = salary * utility_percentage
+
+print(f"La utilidad anual es ${utility:.2f}")
