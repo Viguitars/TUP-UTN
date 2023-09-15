@@ -1,3 +1,10 @@
+""" Ejercitación de repaso
+Crear un programa utilizando todo lo aprendido hasta el momento.
+
+Condicionales
+Iteraciones (for / while)
+Break / Continue """
+
 # Lista para almacenar las películas
 movies_to_watch = []
 
