@@ -18,6 +18,75 @@ else:
 # Crea un juego donde el programa elija una palabra al azar de una lista y
 # el usuario tenga que adivinarla letra por letra. Proporciona un número
 # limitado de intentos y utiliza un bucle while para controlar el juego.
+# Lista con palabras
+words_list = [
+    "babelico",
+    "bahorrina",
+    "depauperar",
+    "ful",
+    "gaznapiro",
+    "lobanillo",
+    "ochavo",
+    "sacamantecas",
+    "uebos",
+    "zonzo",
+]
+# Palabra random de la lista
+secret_word = random.choice(words_list)
+
+# Inicializar variables
+word_length = len(secret_word)
+max_attempts = word_length + 3
+attempts = 0
+guessed_letters = []
+
+# Mostrar la longitud de la palabra con ❌
+guess = "❌" * word_length
+
+print("¡Bienvenido!")
+print(f"La palabra que debe adivinar tiene {word_length} letras: {guess}.")
+
+# Loop principal
+while attempts < max_attempts:
+    letter = input("Ingrese una letra: ").lower()
+    # Verifica que sea una letra
+    if len(letter) != 1 or not letter.isalpha():
+        print("Ingrese una letra válida.")
+        continue
+
+    # Verifica que la letra no se haya introducido antes
+    if letter in guessed_letters:
+        print(f"Ya ingresaste la letra '{letter}'.")
+        continue
+
+    # Agrega la letra a las introducidas
+    guessed_letters.append(letter)
+
+    # Si la letra esta en la palabra elegida
+    if letter in secret_word:
+        # Se recorre letra por letra
+        for index in range(word_length):
+            # Y se reemplazan los ❌ por la letra
+            if secret_word[index] == letter:
+                guess = guess[:index] + letter + guess[index + 1 :]
+        print(f"!Bien hecho¡ {guess}")
+
+        # Si las palabras son iguales, se finaliza el programa
+        if guess == secret_word:
+            print(
+                f"¡Felicidades! Has adivinado la palabra '{secret_word}' correctamente."
+            )
+            break
+
+    # Si la letra no esta en la palabra se modifica la cantidad de intentos
+    else:
+        attempts += 1
+        remaining_attempts = max_attempts - attempts
+        print(f"¡Incorrecto! Te quedan {remaining_attempts} intentos.")
+
+# Si se superan los intentos permitidos, se muestra la solución
+if attempts == max_attempts:
+    print(f"Has agotado todos tus intentos. La palabra correcta era: {secret_word}")
 
 # Ejercitación 3
 # Escribe un programa que cuente cuántas palabras hay en una cadena de
