@@ -326,7 +326,6 @@ class Ejercicio_14 {
 // 15. Programa que lea por teclado tres números enteros H, M, S
 // correspondientes a hora, minutos y segundos respectivamente, y comprueba si
 // la hora que indican es una hora válida.
-
 // Supondremos que leemos una hora en modo 24 Horas, es decir, el valor válido
 // para las horas será mayor o igual que cero y menor que 24. El valor válido
 // para los minutos y segundos estará comprendido entre 0 y 59 ambos incluidos.
@@ -352,5 +351,346 @@ class Ejercicio_15 {
       } else {
          System.out.println(hour + ":" + minutes + ":" + seconds + " no es válida.");
       }
+   }
+}
+
+// 16. Programa que lea una variable entera mes y compruebe si el valor
+// corresponde a un mes de 30 días, de 31 o de 28. Supondremos que febrero tiene
+// 28 días. Se mostrará además el nombre del mes. Se debe comprobar que el valor
+// introducido esté comprendido entre 1 y 12.
+class Ejercicio_16 {
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+      System.out.print("Ingrese el número de mes (1-12): ");
+      int month = sc.nextInt();
+
+      sc.close();
+
+      switch (month) {
+         case 1, 3, 5, 7, 8, 10, 12:
+            System.out.println("El mes tiene 31 días.");
+            break;
+         case 4, 6, 9, 11:
+            System.out.println("El mes tiene 30 días.");
+            break;
+         case 2:
+            System.out.println("El mes tiene 28 días.");
+            break;
+         default:
+            System.out.println("Ingrese un número de mes válido.");
+            break;
+      }
+   }
+}
+
+// 17. Programa java para convertir una calificación numérica en alfabética.
+// El programa lee por teclado una calificación numérica entre 0 y 10 y muestra
+// por pantalla su correspondiente calificación alfabética.
+// La equivalencia entre la calificación numérica y la alfabética se muestra en
+// esta tabla:
+
+// Nota numérica Nota Alfabética
+// 0 <= nota < 5 Insuficiente
+// 5 <= nota < 6 Suficiente
+// 6 <= nota < 7 Bien
+// 7 <= nota < 9 Notable
+// 9 <= nota <= 10 Sobresaliente
+
+// La calificación numérica que se introduce por teclado debe estar comprendida
+// entre 0 y 10 para poder obtener su equivalente calificación alfabética. Si la
+// calificación introducida no es válida se muestra un mensaje indicándolo y el
+// programa finaliza.
+class Ejercicio_17 {
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+      System.out.print("Ingrese una calificación numérica (0-10): ");
+      int numericGrade = sc.nextInt();
+
+      sc.close();
+
+      if (numericGrade >= 0 && numericGrade <= 10) {
+         if (numericGrade < 5) {
+            System.out.println("Calificación Alfabética: Insuficiente");
+         } else if (numericGrade < 6) {
+            System.out.println("Calificación Alfabética: Suficiente");
+         } else if (numericGrade < 7) {
+            System.out.println("Calificación Alfabética: Bien");
+         } else if (numericGrade < 9) {
+            System.out.println("Calificación Alfabética: Notable");
+         } else {
+            System.out.println("Calificación Alfabética: Sobresaliente");
+         }
+      } else {
+         System.out.println("Ingrese una calificación numérica válida (entre 0 y 10).");
+      }
+   }
+}
+
+// 18. Ejemplo de uso de while: Programa Java que muestre los números del 1 al
+// 100 utilizando la instrucción while.
+class Ejercicio_18 {
+   public static void main(String[] args) {
+      int i = 1;
+      while (i <= 100) {
+         System.out.println(i);
+         i++;
+      }
+   }
+}
+
+// 19. Ejemplo de uso de do-while. Programa Java que muestre los números del 1
+// al 100 utilizando la instrucción do..while.
+class Ejercicio_19 {
+   public static void main(String[] args) {
+      int i = 1;
+      do {
+         System.out.println(i);
+         i++;
+      } while (i <= 100);
+   }
+}
+
+// 20. Ejemplo de uso de for. Programa Java que muestre los números del 1 al 100
+// utilizando la instrucción for.
+class Ejercicio_20 {
+   public static void main(String[] args) {
+      for (int i = 1; i <= 100; i++) {
+         System.out.println(i);
+      }
+   }
+}
+
+// 21. Ejemplo de uso de while. Programa Java que muestre los números del 100 al
+// 1 utilizando la instrucción while.
+class Ejercicio_21 {
+   public static void main(String[] args) {
+      int i = 100;
+      while (i >= 1) {
+         System.out.println(i);
+         i--;
+      }
+   }
+}
+
+// 22. Ejemplo de uso de do-while. Programa Java que muestre los números del 100
+// al 1 utilizando la instrucción do..while.
+class Ejercicio_22 {
+   public static void main(String[] args) {
+      int i = 100;
+      do {
+         System.out.println(i);
+         i--;
+      } while (i >= 1);
+   }
+}
+
+// 23. Ejemplo de for. Programa Java que muestre los números del 100 al 1
+// utilizando la instrucción for.
+class Ejercicio_23 {
+   public static void main(String[] args) {
+      for (int i = 100; i >= 1; i--) {
+         System.out.println(i);
+      }
+   }
+}
+
+// 24. Escribe un programa Java que pida por teclado el valor de un número N y
+// muestre por pantalla todos los números desde 1 hasta N. Resuelve este
+// ejercicio de tres formas distintas:
+// 1. Utilizando la estructura for
+// 2. Utilizando la estructura while
+// 3. Utilizando la estructura do .. while
+class Ejercicio_24 {
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+      System.out.print("Ingrese un número entero N: ");
+      int N = sc.nextInt();
+
+      System.out.println("1. Usando for:");
+      for (int i = 1; i <= N; i++) {
+         System.out.println(i);
+      }
+
+      System.out.println("2. Usando while:");
+      int i = 1;
+      while (i <= N) {
+         System.out.println(i);
+         i++;
+      }
+
+      System.out.println("3. Usando do..while:");
+      i = 1;
+      do {
+         System.out.println(i);
+         i++;
+      } while (i <= N);
+
+      sc.close();
+   }
+}
+
+// 25. Programa que pida que se introduzca por teclado el valor de un número
+// entero N y muestre los números desde N hasta 1 ambos incluidos. Se debe
+// resolver este ejercicio de tres formas distintas utilizando la estructura
+// repetitiva:
+// 1. Utilizando la estructura for
+// 2. Utilizando la estructura while
+// 3. Utilizando la estructura do .. while
+class Ejercicio_25 {
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+      System.out.print("Ingrese un número entero N: ");
+      int N = sc.nextInt();
+
+      System.out.println("1. Usando for:");
+      for (int i = N; i >= 1; i--) {
+         System.out.println(i);
+      }
+
+      System.out.println("2. Usando while:");
+      int i = N;
+      while (i >= 1) {
+         System.out.println(i);
+         i--;
+      }
+
+      System.out.println("3. Usando do..while:");
+      i = N;
+      do {
+         System.out.println(i);
+         i--;
+      } while (i >= 1);
+
+      sc.close();
+   }
+}
+
+// 26. Programa que pida que se introduzcan dos números enteros por teclado y
+// muestre los números desde el menor hasta el mayor de los números
+// introducidos. Los dos números introducidos deben ser distintos. Si son
+// iguales se mostrará un mensaje indicándolo y se vuelven a introducir.
+class Ejercicio_26 {
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+      System.out.print("Ingrese un número entero A: ");
+      int A = sc.nextInt();
+      System.out.print("Ingrese un número entero B (mayor que A): ");
+      int B = sc.nextInt();
+
+      sc.close();
+
+      if (A < B) {
+         System.out.println("Números  entre " + A + " y " + B + ":");
+         for (int i = A; i <= B; i++) {
+            System.out.println(i);
+         }
+      } else {
+         System.out.println("A debe ser menor que B. Por favor, ingrese valores válidos.");
+      }
+   }
+}
+
+// 27. Programa que pida que se introduzcan dos números enteros A y B por
+// teclado y muestre los números pares que hay entre A y B. A debe ser menor que
+// B. Si no es así se mostrará un mensaje indicándolo y se vuelven a introducir.
+class Ejercicio_27 {
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+      System.out.print("Ingrese un número entero A: ");
+      int A = sc.nextInt();
+      System.out.print("Ingrese un número entero B (mayor que A): ");
+      int B = sc.nextInt();
+
+      sc.close();
+
+      if (A < B) {
+         System.out.println("Números pares entre " + A + " y " + B + ":");
+         for (int i = A; i <= B; i++) {
+            if (i % 2 == 0) {
+               System.out.println(i);
+            }
+         }
+      } else {
+         System.out.println("A debe ser menor que B. Por favor, ingrese valores válidos.");
+      }
+   }
+}
+
+// 28. Programa que lea dos números enteros positivos N y M y muestre los
+// múltiplos de N que hay desde 1 hasta M. Por ejemplo si N = 4 y M = 500 el
+// programa mostrará los múltiplos de 4 desde 1 hasta 500. El valor de N deberá
+// ser menor que el valor de M. Si no se introducen valores válidos para N o M
+// se mostrará el mensaje correspondiente y se vuelven a pedir.
+class Ejercicio_28 {
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+      int N, M;
+
+      do {
+         System.out.print("Ingrese un número entero positivo N: ");
+         N = sc.nextInt();
+
+         if (N <= 0) {
+            System.out.println("Por favor, ingrese un valor válido para N (debe ser positivo).");
+         }
+      } while (N <= 0);
+
+      do {
+         System.out.print("Ingrese un número entero positivo M: ");
+         M = sc.nextInt();
+
+         if (M <= 0) {
+            System.out.println("Por favor, ingrese un valor válido para M (debe ser positivo).");
+         }
+      } while (M <= 0);
+
+      if (N < M) {
+         System.out.println("Múltiplos de " + N + " desde 1 hasta " + M + ":");
+         for (int i = 1; i <= M; i++) {
+            if (i % N == 0) {
+               System.out.println(i);
+            }
+         }
+      } else {
+         System.out.println("N debe ser menor que M para encontrar múltiplos.");
+      }
+
+      sc.close();
+   }
+}
+
+// 29. Programa Java que convierte millas a kilómetros. El programa pide que se
+// introduzca una cantidad de millas y calcula y muestra su equivalente en
+// Kilómetros. El proceso se repite hasta que se introduzca un 0 como valor para
+// las millas.
+// 1 Milla equivale a 1.6093 Kilómetros.
+// El valor de los KM resultantes se debe mostrar con dos decimales.
+// Para pasar de millas a Km realizaremos la operación:
+// Km = millas * 1.6093
+class Ejercicio_29 {
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+      double miles;
+      final double MILES_TO_KILOMETERS = 1.6093;
+
+      do {
+         System.out.print("Ingrese una cantidad de millas (0 para salir): ");
+         miles = sc.nextDouble();
+
+         if (miles != 0) {
+            double kilometers = miles * MILES_TO_KILOMETERS;
+            System.out.println(miles + " millas son equivalentes a " + kilometers + " kilómetros.");
+         }
+      } while (miles != 0);
+
+      sc.close();
    }
 }
