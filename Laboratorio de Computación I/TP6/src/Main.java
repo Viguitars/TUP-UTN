@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 // 1. Programa Java que lea por teclado 10 números enteros y los guarde en un
 // array. A continuación calcula y muestra por separado la media de los valores
-// positivos y la de los valores negativos.
+// positivos y la de los negativos.
 class Ejercicio_1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -13,7 +13,7 @@ class Ejercicio_1 {
         double[] values = new double[10];
 
         for (i = 0; i < values.length; i++) {
-            System.out.println("Ingrese la nota " + (i + 1) + ":");
+            System.out.println("Ingrese el " + (i + 1) + "° valor:");
             values[i] = sc.nextDouble();
         }
 
@@ -29,9 +29,9 @@ class Ejercicio_1 {
 
         negative_average = negative_sum / values.length;
 
-        System.out.printf("Nota media de los número positivos: %.2f %n", positive_average);
+        System.out.printf("Valor medio de los número positivos: %.2f %n", positive_average);
 
-        System.out.printf("Nota media de los número negativos: %.2f %n", negative_average);
+        System.out.printf("Valor medio de los número negativos: %.2f %n", negative_average);
 
         sc.close();
     }
@@ -40,8 +40,35 @@ class Ejercicio_1 {
 // 2. Programa Java que lea 10 números enteros por teclado y los guarde en un
 // array. Calcula y muestra la media de los números que estén en las posiciones
 // pares del array.
+// Considera la primera posición del array como par.
 
-// Considera la primera posición del array (posición 0) como par.
+class Ejercicio_2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int i;
+        double sum = 0, average;
+        double[] values = new double[10];
+
+        for (i = 0; i < values.length; i++) {
+            System.out.println("Ingrese el " + (i + 1) + "° valor:");
+            values[i] = sc.nextDouble();
+        }
+
+        for (i = 0; i < values.length; i++) {
+            if (i % 2 == 0) {
+                sum += values[i];
+            }
+        }
+
+        average = sum / 5;
+
+        System.out.printf("El valor medio de los números en posición par es: %.2f %n", average);
+
+        sc.close();
+    }
+}
+
 
 // 3. Programa que lee por teclado la nota de los alumnos de una clase y calcula
 // la nota media del grupo. También muestra los alumnos con notas superiores a
