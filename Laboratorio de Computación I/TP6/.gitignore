@@ -3,6 +3,13 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
+### JetBrains Patch ###
+
+*.iml
+modules.xml
+.idea/
+*.ipr
+
 ### Eclipse ###
 .apt_generated
 .classpath
@@ -27,3 +34,5 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+.gitignore
