@@ -273,7 +273,8 @@ class Ejercicio_8 {
             }
         }
 
-        System.out.println("El empleado con el sueldo más alto es " + highestPaidEmployee + " con un sueldo de $" + highestSalary);
+        System.out.println(
+                "El empleado con el sueldo más alto es " + highestPaidEmployee + " con un sueldo de $" + highestSalary);
 
         sc.close();
     }
@@ -311,11 +312,11 @@ class Ejercicio_8 {
 // B que se encuentran en la misma posición. Por ejemplo, si las matrices A y B
 // son estas:
 
-// Matriz A: 2   1   3       Matriz B: 1   5   2
-//           4   0   8                 3   1   7
+// Matriz A: 2 1 3 Matriz B: 1 5 2
+// 4 0 8 3 1 7
 // La matriz C, suma de A+B será esta:
-// Matriz C: 3   6   5
-//           7   1   15
+// Matriz C: 3 6 5
+// 7 1 15
 class Ejercicio_10_A {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -442,13 +443,14 @@ class Ejercicio_10_B {
 // Dada una matriz A su transpuesta AT se obtiene intercambiando las filas por
 // columnas y las columnas por filas.
 // Por ejemplo, si tenemos la matriz A de 2 filas y 4 columnas:
-// 1   2   3   4
-// 5   6   7   8
-// Su matriz transpuesta es una matriz de 4 filas y 2 columnas con este contenido:
-// 1   5
-// 2   6
-// 3   7
-// 4   8
+// 1 2 3 4
+// 5 6 7 8
+// Su matriz transpuesta es una matriz de 4 filas y 2 columnas con este
+// contenido:
+// 1 5
+// 2 6
+// 3 7
+// 4 8
 // La primera fila de A se convierte en la primera columna de la matriz
 // transpuesta y la segunda fila de A se convierte en la segunda columna de la
 // matriz transpuesta.
