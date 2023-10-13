@@ -1,9 +1,21 @@
 import math
 
+# Esta función verifica si la entrada es un número entero
+
+
+def is_an_integer(input_str):
+    while True:
+        try:
+            int(input_str)
+            return True
+        except ValueError:
+            return False
+
+
 # Funciones Ejercicio 1
 
 
-def validate_dni(dni_number):
+def is_a_valid_dni(dni_number):
     if len(dni_number) >= 7 and len(dni_number) <= 8:
         return True
     else:
@@ -15,7 +27,6 @@ def validate_dni(dni_number):
 
 def last_word_length(input_string):
     words = input_string.strip().split()
-    print(words)
     if words:
         return len(words[-1])
     else:
@@ -59,10 +70,14 @@ def find_max_min(numbers):
 
 
 # Funciones Ejercicio 8
-def calculate_area_perimeter(radius):
+def calculate_area(radius):
     area = math.pi * radius**2
+    return round(area, 2)
+
+
+def calculate_perimeter(radius):
     perimeter = 2 * math.pi * radius
-    return area, perimeter
+    return round(perimeter, 2)
 
 
 # Funciones Ejercicio 9
@@ -75,10 +90,10 @@ def login(username, password, attempts):
 
 
 # Funciones Ejercicio 10
-def apply_discount(cart):
+def apply_discount(shopping_cart, discounts):
     total_price = 0
 
-    for product, price in cart.items():
+    for product, price in shopping_cart.items():
         if product in discounts:
             discount = discounts[product]
             discounted_price = price - (price * (discount / 100))
@@ -87,19 +102,6 @@ def apply_discount(cart):
             total_price += price
 
     return total_price
-
-
-shopping_cart = {
-    "producto 1": 20.0,
-    "producto 2": 30.0,
-    "producto 3": 25.0,
-}
-discounts = {
-    "producto 1": 10,
-    "producto 3": 5,
-}
-final_price = apply_discount(shopping_cart)
-print("Precio Final:", final_price)
 
 
 # Funciones Ejercicio 11
@@ -117,11 +119,6 @@ def double_number(number):
     return number * 2
 
 
-numbers = [1, 2, 3, 4, 5]
-result = apply_function_to_list(double_number, numbers)
-print(result)
-
-
 # Funciones Ejercicio 12
 def count_word_lengths(phrase):
     words = phrase.split()
@@ -134,21 +131,11 @@ def count_word_lengths(phrase):
     return result
 
 
-phrase = "Hola, esta es una frase de ejemplo con algunas palabras."
-result = count_word_lengths(phrase)
-print(result)
-
-
 # Funciones Ejercicio 13
 def calculate_magnitude(vector):
     sum_of_squares = sum([x**2 for x in vector])
     magnitude = math.sqrt(sum_of_squares)
     return magnitude
-
-
-vector = [3, 4]
-magnitude = calculate_magnitude(vector)
-print("El modulo del vector ", vector, "es:", magnitude)
 
 
 # Funciones Ejercicio 14
