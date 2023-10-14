@@ -33,6 +33,7 @@ while True:
     print("5. Buscar país de destino de pasajero por D.N.I.")
     print("6. Cantidad de pasajeros por país de destino")
     print("0. Salir del Programa")
+
     # Se solicita a usuario una opción
     user_input = input("\nSeleccione una opción: ")
 
@@ -54,7 +55,6 @@ while True:
     else:
         print("\nOpción no válida. Por favor, seleccione una opción válida.")
 
-
 """ 2. Suponer una lista con datos de las compras hechas por clientes de una 
 empresa a lo largo de un mes, la cual contiene tuplas con información de cada 
 venta: (cliente, día del mes, monto, domicilio del cliente). Ejemplo:
@@ -68,6 +68,18 @@ debe enviar una factura de compra. Notar que cada cliente puede haber hecho más
 de una compra en el mes, por lo que la función debe retornar una estructura que
 contenga cada domicilio una sola vez. """
 
+# Inicializar lista de compras
+purchases = [
+    ("Nuria Costa", 5, 1234.5, "Calle 1 - 456"),
+    ("Jorge Russo", 7, 3999, "Calle 2 - 741"),
+    ("Nuria Costa", 15, 999.99, "Calle 1 - 456"),
+    ("Luis Martinez", 22, 1499.5, "Avenida 3 - 123"),
+]
+
+invoice_addresses = get_invoice_addresses(purchases)
+
+for address in invoice_addresses:
+    print(address)
 
 """ 3. Crear un programa para gestionar datos de los socios de un club, 
 permitiendo:
@@ -87,3 +99,35 @@ para indicar que en realidad ingresaron el 14/03/2018.
 - Solicitar el nombre y apellido de un socio y darle de baja (eliminarlo del 
 listado)
 - Imprimir el listado de socios completo. """
+
+# Menu Interactivo
+while True:
+    print("\nMenu")
+    print("1. Agregar socio")
+    print("2. Mostrar cantidad de socios en el club")
+    print("3. Actualizar cuotas de un socio")
+    print("4. Actualizar fecha de ingreso")
+    print("5. Eliminar un socio")
+    print("6. Mostrar la lista completa de socios")
+    print("0. Salir")
+
+    # Se solicita al usuario una opción
+    user_input = input("\nSeleccione una opción: ")
+
+    if user_input == "1":
+        add_member()
+    elif user_input == "2":
+        get_number_of_members()
+    elif user_input == "3":
+        update_member_dues()
+    elif user_input == "4":
+        update_member_date()
+    elif user_input == "5":
+        delete_member()
+    elif user_input == "6":
+        list_of_members()
+    elif user_input == "0":
+        print("\n¡Hasta luego! Programa finalizado.")
+        break
+    else:
+        print("\nOpción no válida. Por favor, seleccione una opción válida.")
