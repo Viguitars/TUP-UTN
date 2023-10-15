@@ -6,7 +6,7 @@ import java.util.Scanner;
 // es igual a cero. En caso contrario el número es impar. El operador Java que 
 // calcula el resto de la división entre dos números enteros o no es el 
 // operador %.
-class Ejercicio_1 {
+class TP5Ejercicio1 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -27,7 +27,7 @@ class Ejercicio_1 {
 // 10.
 // Podemos comprobar si un número entero es múltiplo de 10 si al dividirlo por
 // 10 el resto de esta división es cero.
-class Ejercicio_2 {
+class TP5Ejercicio2 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -46,7 +46,7 @@ class Ejercicio_2 {
 
 // 3. Programa que lea un carácter por teclado y compruebe si es una letra
 // mayúscula.
-class Ejercicio_3 {
+class TP5Ejercicio3 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -67,7 +67,7 @@ class Ejercicio_3 {
 // números a comprobar se introducen por teclado.
 // Este es un ejercicio básico en Java para practicar la estructura
 // condicional if .. else.
-class Ejercicio_4 {
+class TP5Ejercicio4 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -91,7 +91,7 @@ class Ejercicio_4 {
 // introducen por teclado.
 // El programa muestra por pantalla cuál de los dos números es el mayor o si
 // son iguales.
-class Ejercicio_5 {
+class TP5Ejercicio5 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -123,7 +123,7 @@ class Ejercicio_5 {
 // La última cifra de cada número se obtiene calculando el resto de la
 // división del número entre 10. Por ejemplo, si uno de los números es 123 su
 // última cifra se calcula 123 % 10 = 3
-class Ejercicio_6 {
+class TP5Ejercicio6 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -144,7 +144,7 @@ class Ejercicio_6 {
 
 // 7. Programa java para calcular si un número entero es múltiplo de tres y de
 // cinco.
-class Ejercicio_7 {
+class TP5Ejercicio7 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -163,7 +163,7 @@ class Ejercicio_7 {
 
 // 8. Programa java para calcular si un número entero es múltiplo de dos o de
 // tres.
-class Ejercicio_8 {
+class TP5Ejercicio8 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -181,7 +181,7 @@ class Ejercicio_8 {
 }
 
 // 9. Programa que lea dos caracteres y compruebe si son iguales.
-class Ejercicio_9 {
+class TP5Ejercicio9 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -204,7 +204,7 @@ class Ejercicio_9 {
 
 // 10. Programa java que lea dos caracteres por teclado y compruebe si los dos
 // son letras minúsculas.
-class Ejercicio_10 {
+class TP5Ejercicio10 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -225,7 +225,7 @@ class Ejercicio_10 {
 
 // 11. Programa java que lea un carácter por teclado y compruebe si es un dígito
 // numérico (cifra entre 0 y 9).
-class Ejercicio_11 {
+class TP5Ejercicio11 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -245,7 +245,7 @@ class Ejercicio_11 {
 // 12. Programa que lea dos números por teclado y muestre el resultado de la
 // división del primer número por el segundo. Se debe comprobar que el divisor
 // no puede ser cero.
-class Ejercicio_12 {
+class TP5Ejercicio12 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -271,7 +271,7 @@ class Ejercicio_12 {
 // si es un año bisiesto o no lo es.
 // Un año es bisiesto si es divisible por 4 y no lo es por 100 o si es divisible
 // por 400.
-class Ejercicio_13 {
+class TP5Ejercicio13 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -299,7 +299,7 @@ class Ejercicio_13 {
 // Como el programa pide que el número introducido sea de tres cifras, para
 // comprobar si es capicúa solo tendremos que comprobar si la primera cifra y la
 // última son iguales.
-class Ejercicio_14 {
+class TP5Ejercicio14 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -329,7 +329,7 @@ class Ejercicio_14 {
 // Supondremos que leemos una hora en modo 24 Horas, es decir, el valor válido
 // para las horas será mayor o igual que cero y menor que 24. El valor válido
 // para los minutos y segundos estará comprendido entre 0 y 59 ambos incluidos.
-class Ejercicio_15 {
+class TP5Ejercicio15 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -358,7 +358,7 @@ class Ejercicio_15 {
 // corresponde a un mes de 30 días, de 31 o de 28. Supondremos que febrero tiene
 // 28 días. Se mostrará además el nombre del mes. Se debe comprobar que el valor
 // introducido esté comprendido entre 1 y 12.
-class Ejercicio_16 {
+class TP5Ejercicio16 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -401,7 +401,7 @@ class Ejercicio_16 {
 // entre 0 y 10 para poder obtener su equivalente calificación alfabética. Si la
 // calificación introducida no es válida se muestra un mensaje indicándolo y el
 // programa finaliza.
-class Ejercicio_17 {
+class TP5Ejercicio17 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -430,7 +430,7 @@ class Ejercicio_17 {
 
 // 18. Ejemplo de uso de while: Programa Java que muestre los números del 1 al
 // 100 utilizando la instrucción while.
-class Ejercicio_18 {
+class TP5Ejercicio18 {
    public static void main(String[] args) {
       int i = 1;
       while (i <= 100) {
@@ -442,7 +442,7 @@ class Ejercicio_18 {
 
 // 19. Ejemplo de uso de do-while. Programa Java que muestre los números del 1
 // al 100 utilizando la instrucción do..while.
-class Ejercicio_19 {
+class TP5Ejercicio19 {
    public static void main(String[] args) {
       int i = 1;
       do {
@@ -454,7 +454,7 @@ class Ejercicio_19 {
 
 // 20. Ejemplo de uso de for. Programa Java que muestre los números del 1 al 100
 // utilizando la instrucción for.
-class Ejercicio_20 {
+class TP5Ejercicio20 {
    public static void main(String[] args) {
       for (int i = 1; i <= 100; i++) {
          System.out.println(i);
@@ -464,7 +464,7 @@ class Ejercicio_20 {
 
 // 21. Ejemplo de uso de while. Programa Java que muestre los números del 100 al
 // 1 utilizando la instrucción while.
-class Ejercicio_21 {
+class TP5Ejercicio21 {
    public static void main(String[] args) {
       int i = 100;
       while (i >= 1) {
@@ -476,7 +476,7 @@ class Ejercicio_21 {
 
 // 22. Ejemplo de uso de do-while. Programa Java que muestre los números del 100
 // al 1 utilizando la instrucción do..while.
-class Ejercicio_22 {
+class TP5Ejercicio22 {
    public static void main(String[] args) {
       int i = 100;
       do {
@@ -488,7 +488,7 @@ class Ejercicio_22 {
 
 // 23. Ejemplo de for. Programa Java que muestre los números del 100 al 1
 // utilizando la instrucción for.
-class Ejercicio_23 {
+class TP5Ejercicio23 {
    public static void main(String[] args) {
       for (int i = 100; i >= 1; i--) {
          System.out.println(i);
@@ -502,7 +502,7 @@ class Ejercicio_23 {
 // 1. Utilizando la estructura for
 // 2. Utilizando la estructura while
 // 3. Utilizando la estructura do .. while
-class Ejercicio_24 {
+class TP5Ejercicio24 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -539,7 +539,7 @@ class Ejercicio_24 {
 // 1. Utilizando la estructura for
 // 2. Utilizando la estructura while
 // 3. Utilizando la estructura do .. while
-class Ejercicio_25 {
+class TP5Ejercicio25 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -573,7 +573,7 @@ class Ejercicio_25 {
 // muestre los números desde el menor hasta el mayor de los números
 // introducidos. Los dos números introducidos deben ser distintos. Si son
 // iguales se mostrará un mensaje indicándolo y se vuelven a introducir.
-class Ejercicio_26 {
+class TP5Ejercicio26 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -598,7 +598,7 @@ class Ejercicio_26 {
 // 27. Programa que pida que se introduzcan dos números enteros A y B por
 // teclado y muestre los números pares que hay entre A y B. A debe ser menor que
 // B. Si no es así se mostrará un mensaje indicándolo y se vuelven a introducir.
-class Ejercicio_27 {
+class TP5Ejercicio27 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -627,7 +627,7 @@ class Ejercicio_27 {
 // programa mostrará los múltiplos de 4 desde 1 hasta 500. El valor de N deberá
 // ser menor que el valor de M. Si no se introducen valores válidos para N o M
 // se mostrará el mensaje correspondiente y se vuelven a pedir.
-class Ejercicio_28 {
+class TP5Ejercicio28 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -674,7 +674,7 @@ class Ejercicio_28 {
 // El valor de los KM resultantes se debe mostrar con dos decimales.
 // Para pasar de millas a Km realizaremos la operación:
 // Km = millas * 1.6093
-class Ejercicio_29 {
+class TP5Ejercicio29 {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
