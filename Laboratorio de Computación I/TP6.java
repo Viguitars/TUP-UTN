@@ -3,37 +3,37 @@ import java.util.Scanner;
 // 1. Programa Java que lea por teclado 10 números enteros y los guarde en un
 // array. A continuación calcula y muestra por separado la media de los valores
 // positivos y la de los negativos.
-class Ejercicio_1 {
+class TP6Ejercicio1 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            int i;
+            double positive_sum = 0, negative_sum = 0, positive_average, negative_average;
 
-        int i;
-        double positive_sum = 0, negative_sum = 0, positive_average, negative_average;
+            double[] values = new double[10];
 
-        double[] values = new double[10];
-
-        for (i = 0; i < values.length; i++) {
-            System.out.println("Ingrese el " + (i + 1) + "° valor:");
-            values[i] = sc.nextDouble();
-        }
-
-        for (i = 0; i < values.length; i++) {
-            if (values[i] > 0) {
-                positive_sum += values[i];
-            } else {
-                negative_sum += values[i];
+            for (i = 0; i < values.length; i++) {
+                System.out.println("Ingrese el " + (i + 1) + "° valor:");
+                values[i] = sc.nextDouble();
             }
+
+            for (i = 0; i < values.length; i++) {
+                if (values[i] > 0) {
+                    positive_sum += values[i];
+                } else {
+                    negative_sum += values[i];
+                }
+            }
+
+            positive_average = positive_sum / values.length;
+
+            negative_average = negative_sum / values.length;
+
+            System.out.printf("Valor medio de los número positivos: %.2f %n", positive_average);
+
+            System.out.printf("Valor medio de los número negativos: %.2f %n", negative_average);
+
+            sc.close();
         }
-
-        positive_average = positive_sum / values.length;
-
-        negative_average = negative_sum / values.length;
-
-        System.out.printf("Valor medio de los número positivos: %.2f %n", positive_average);
-
-        System.out.printf("Valor medio de los número negativos: %.2f %n", negative_average);
-
-        sc.close();
     }
 }
 
@@ -41,30 +41,30 @@ class Ejercicio_1 {
 // array. Calcula y muestra la media de los números que estén en las posiciones
 // pares del array.
 // Considera la primera posición del array como par.
-class Ejercicio_2 {
+class TP6Ejercicio2 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            int i;
+            double sum = 0, average;
+            double[] values = new double[10];
 
-        int i;
-        double sum = 0, average;
-        double[] values = new double[10];
-
-        for (i = 0; i < values.length; i++) {
-            System.out.println("Ingrese el " + (i + 1) + "° valor:");
-            values[i] = sc.nextDouble();
-        }
-
-        for (i = 0; i < values.length; i++) {
-            if (i % 2 == 0) {
-                sum += values[i];
+            for (i = 0; i < values.length; i++) {
+                System.out.println("Ingrese el " + (i + 1) + "° valor:");
+                values[i] = sc.nextDouble();
             }
+
+            for (i = 0; i < values.length; i++) {
+                if (i % 2 == 0) {
+                    sum += values[i];
+                }
+            }
+
+            average = sum / 5;
+
+            System.out.printf("El valor medio de los números en posición par es: %.2f %n", average);
+
+            sc.close();
         }
-
-        average = sum / 5;
-
-        System.out.printf("El valor medio de los números en posición par es: %.2f %n", average);
-
-        sc.close();
     }
 }
 
@@ -80,7 +80,7 @@ class Ejercicio_2 {
 // elemento las notas introducidas por teclado, el segundo para sumarlas y
 // calcular la media y el tercero para mostrar los alumnos con notas superiores
 // a la media.
-class Ejercicio_3 {
+class TP6Ejercicio3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -113,7 +113,7 @@ class Ejercicio_3 {
 
 // 4. Programa que crea un array de 20 elementos llamado Pares y guarde los 20
 // primeros números pares. Mostrar por pantalla el contenido del array creado.
-class Ejercicio_4 {
+class TP6Ejercicio4 {
     public static void main(String[] args) {
         int[] evenNumbers = new int[20];
 
@@ -131,7 +131,7 @@ class Ejercicio_4 {
 // 5. Programa Java que guarda en un array 10 números enteros que se leen por
 // teclado. A continuación se recorre el array y calcula cuántos números son
 // positivos, cuántos negativos y cuántos ceros.
-class Ejercicio_5 {
+class TP6Ejercicio5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] numbers = new int[10];
@@ -161,7 +161,7 @@ class Ejercicio_5 {
 // 6. Programa Java que llene un array con 10 números enteros que se leen por
 // teclado. A continuación calcula y muestra la media de los valores positivos y
 // la de los valores negativos del array.
-class Ejercicio_6 {
+class TP6Ejercicio6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] numbers = new int[10];
@@ -195,7 +195,7 @@ class Ejercicio_6 {
 // media. Calcular cuántas personas tienen una altura superior a la media y
 // cuántas tienen una altura inferior a la media. El valor de N se pide por
 // teclado y debe ser entero positivo.
-class Ejercicio_7 {
+class TP6Ejercicio7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -251,7 +251,7 @@ class Ejercicio_7 {
 
 // En general para calcular el mayor de una serie de números tomamos el primero
 // como mayor y después comparamos el resto de números.
-class Ejercicio_8 {
+class TP6Ejercicio8 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -317,7 +317,7 @@ class Ejercicio_8 {
 // La matriz C, suma de A+B será esta:
 // Matriz C: 3 6 5
 // 7 1 15
-class Ejercicio_10_A {
+class TP6Ejercicio10_A {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -377,28 +377,28 @@ class Ejercicio_10_A {
 // Un método que realiza la suma de dos matrices. El método recibe las dos
 // matrices a sumar y devuelve una matriz con el resultado de la suma de ambas
 // matrices.
-class Ejercicio_10_B {
+class TP6Ejercicio10_B {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Ingrese el número de filas de las matrices: ");
+            int rows = sc.nextInt();
+            System.out.print("Ingrese el número de columnas de las matrices: ");
+            int columns = sc.nextInt();
 
-        System.out.print("Ingrese el número de filas de las matrices: ");
-        int rows = sc.nextInt();
-        System.out.print("Ingrese el número de columnas de las matrices: ");
-        int columns = sc.nextInt();
+            int[][] matrixA = createMatrix(rows, columns);
+            int[][] matrixB = createMatrix(rows, columns);
 
-        int[][] matrixA = createMatrix(rows, columns);
-        int[][] matrixB = createMatrix(rows, columns);
+            System.out.println("Ingrese los valores de la matriz A:");
+            fillMatrix(matrixA);
 
-        System.out.println("Ingrese los valores de la matriz A:");
-        fillMatrix(matrixA);
+            System.out.println("Ingrese los valores de la matriz B:");
+            fillMatrix(matrixB);
 
-        System.out.println("Ingrese los valores de la matriz B:");
-        fillMatrix(matrixB);
+            int[][] sumMatrix = sumMatrices(matrixA, matrixB);
 
-        int[][] sumMatrix = sumMatrices(matrixA, matrixB);
-
-        System.out.println("La matriz resultante de la suma es:");
-        displayMatrix(sumMatrix);
+            System.out.println("La matriz resultante de la suma es:");
+            displayMatrix(sumMatrix);
+        }
     }
 
     public static int[][] createMatrix(int rows, int columns) {
@@ -406,11 +406,11 @@ class Ejercicio_10_B {
     }
 
     public static void fillMatrix(int[][] matrix) {
-        Scanner sc = new Scanner(System.in);
-
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-                matrix[i][j] = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix[0].length; j++) {
+                    matrix[i][j] = sc.nextInt();
+                }
             }
         }
     }
@@ -458,28 +458,28 @@ class Ejercicio_10_B {
 // de su matriz transpuesta será 3 x 2 (3 filas y 2 columnas).
 // En general si la matriz A se ha creado de tamaño A[filas][columnas] su matriz
 // transpuesta se debe crear de tamaño AT[columnas]filas].
-class Ejercicio_11 {
+class TP6Ejercicio11 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Ingrese el número de filas de la matriz: ");
+            int rows = sc.nextInt();
+            System.out.print("Ingrese el número de columnas de la matriz: ");
+            int columns = sc.nextInt();
 
-        System.out.print("Ingrese el número de filas de la matriz: ");
-        int rows = sc.nextInt();
-        System.out.print("Ingrese el número de columnas de la matriz: ");
-        int columns = sc.nextInt();
+            int[][] matrix = new int[rows][columns];
 
-        int[][] matrix = new int[rows][columns];
-
-        System.out.println("Ingrese los valores de la matriz:");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
-                matrix[i][j] = sc.nextInt();
+            System.out.println("Ingrese los valores de la matriz:");
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < columns; j++) {
+                    matrix[i][j] = sc.nextInt();
+                }
             }
+
+            int[][] transposeMatrix = transpose(matrix);
+
+            System.out.println("La matriz transpuesta es:");
+            displayMatrix(transposeMatrix);
         }
-
-        int[][] transposeMatrix = transpose(matrix);
-
-        System.out.println("La matriz transpuesta es:");
-        displayMatrix(transposeMatrix);
     }
 
     public static int[][] transpose(int[][] matrix) {
