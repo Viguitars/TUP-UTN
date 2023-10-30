@@ -1,3 +1,6 @@
+Cspell:disable
+
+
 -- Creación de la base de datos
 CREATE DATABASE alquilerPeliculas;
 USE alquilerPeliculas;
