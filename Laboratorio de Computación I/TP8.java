@@ -1,5 +1,4 @@
 import java.util.Random;
-import java.util.Scanner;
 
 // Escribir un método para sumar dos matrices de enteros y devolver la matriz
 // resultante.
