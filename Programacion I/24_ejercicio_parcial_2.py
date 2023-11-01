@@ -41,3 +41,52 @@ función que verifica si hay presencia de genes mutantes o no y mostrar el
 resultado por pantalla al usuario.
 
 Subir a Github el proyecto con los casos de prueba. """
+
+class MutantDetector:
+    def __init__(self, dna):
+        self.dna = dna
+
+    def is_valid(self):
+        if len(self.dna) != 6:
+            return False
+        for row in self.dna:
+            if len(row) != 6 or not all(base in "ATCG" for base in row):
+                return False
+        return True
+
+    def check_sequence(self, sequence):
+        return any(char * 4 in sequence for char in "ATCG")
+
+    def is_mutant(self):
+        if not self.is_valid():
+            return False
+
+        def check_matrix(matrix):
+            for row in matrix:
+                if self.check_sequence(row):
+                    return True
+
+        # Verificar filas y columnas
+        if check_matrix(self.dna) or check_matrix(list(map(list, zip(*self.dna)))):
+            return True
+
+        # Verificar diagonales
+        diagonals = ["".join(self.dna[i + k][k] for k in range(4)) for i in range(3)] + \
+                    ["".join(self.dna[i + k][3 - k] for k in range(4)) for i in range(3)]
+        if any(self.check_sequence(diagonal) for diagonal in diagonals):
+            return True
+
+        return False
+
+# Solicitar la matriz de ADN al usuario
+dna = []
+for i in range(6):
+    row = input(f"Ingrese la fila {i + 1} de ADN (6 letras A, T, C o G): ").strip().upper()
+    dna.append(row)
+
+# Crear un objeto MutantDetector y verificar si es mutante
+detector = MutantDetector(dna)
+if detector.is_mutant():
+    print("¡Es un mutante!")
+else:
+    print("No es un mutante.")
