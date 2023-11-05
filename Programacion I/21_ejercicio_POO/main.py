@@ -1,4 +1,4 @@
-from Motocicleta import Motocicleta
+from motocicleta import Motocicleta
 
 """ Vamos a crear una clase llamada ‘motocicleta’ y haremos un par de instancias
 de ella.
