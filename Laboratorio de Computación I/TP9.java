@@ -395,7 +395,7 @@ class TP9Ejercicio16 {
 }
 
 // Elimina todos los elementos duplicados de un ArrayList de cadenas.
-/* class TP9Ejercicio17 {
+class TP9Ejercicio17 {
     public static void main(String[] args) {
 
         ArrayList<String> nombres = new ArrayList<>();
@@ -407,37 +407,268 @@ class TP9Ejercicio16 {
         nombres.add("Juan");
         nombres.add("Carlos");
 
-        System.out.println("\nArrayList nombres: " + nombres);
+        ArrayList<String> uniqueList = new ArrayList<>();
 
-        ArrayList<Integer> arrayListSinDuplicados = new ArrayList<>(nombres);
+        for (String element : nombres) {
+            if (!uniqueList.contains(element)) {
+                uniqueList.add(element);
+            }
+        }
 
-        // construye un conjunto a partir de elementos de la lista
-        Set<String> set = new LinkedHashSet<>(arrayListSinDuplicados);
-
-        // construir una nueva lista a partir de un conjunto e imprimirla
-        List<String> listWithoutDuplicates = new ArrayList<>(set);
-
-        System.out.println("\nConcatenado: " + arrayListSinDuplicados);
+        System.out.println("\nArrayList original: " + nombres);
+        System.out.println("\nArrayList sin elementos duplicados: " + uniqueList);
 
     }
-} */
+}
+
 // Crea un ArrayList de enteros y encuentra la suma de los elementos en índices
 // pares.
+class TP9Ejercicio18 {
+    public static void main(String[] args) {
+        Random rnd = new Random();
+
+        ArrayList<Integer> numeros = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
+            numeros.add(rnd.nextInt(99) + 1);
+        }
+
+        int sumaIndicesPares = sumaIndicesPares(numeros);
+
+        System.out.println("\nArrayList de enteros: " + numeros);
+        System.out.println("\nLa suma de los elementos en índices pares es: " + sumaIndicesPares);
+    }
+
+    public static int sumaIndicesPares(ArrayList<Integer> lista) {
+        int suma = 0;
+
+        for (int i = 0; i < lista.size(); i += 2) {
+            suma += lista.get(i);
+        }
+
+        return suma;
+    }
+}
 
 // Comprueba si un ArrayList de enteros contiene un número específico.
+class TP9Ejercicio19 {
+    public static void main(String[] args) {
+        Random rnd = new Random();
+
+        ArrayList<Integer> numeros = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
+            numeros.add(rnd.nextInt(99) + 1);
+        }
+
+        int numeroBuscado = numeros.get(3);
+
+        if (contieneNumero(numeros, numeroBuscado)) {
+            System.out.println("\nEl ArrayList contiene el número " + numeroBuscado);
+        } else {
+            System.out.println("\nEl ArrayList no contiene el número " + numeroBuscado);
+        }
+    }
+
+    public static boolean contieneNumero(ArrayList<Integer> lista, int numero) {
+        return lista.contains(numero);
+    }
+}
 
 // Encuentra el elemento en un ArrayList de cadenas que tiene la longitud más
 // larga.
+class TP9Ejercicio20 {
+    public static void main(String[] args) {
+
+        ArrayList<String> nombres = new ArrayList<>();
+
+        nombres.add("Juan");
+        nombres.add("María");
+        nombres.add("Carlos");
+
+        String cadenaMasLarga = encontrarCadenaMasLarga(nombres);
+
+        System.out.println("\nLa cadena más larga es: " + cadenaMasLarga);
+    }
+
+    public static String encontrarCadenaMasLarga(ArrayList<String> lista) {
+        String cadenaMasLarga = "";
+        int longitudMaxima = 0;
+
+        for (String cadena : lista) {
+            if (cadena.length() > longitudMaxima) {
+                cadenaMasLarga = cadena;
+                longitudMaxima = cadena.length();
+            }
+        }
+
+        return cadenaMasLarga;
+    }
+}
 
 // Encuentra el promedio de todos los elementos en un ArrayList de números
 // enteros.
+class TP9Ejercicio21 {
+    public static void main(String[] args) {
+        Random rnd = new Random();
+
+        ArrayList<Integer> numeros = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
+            numeros.add(rnd.nextInt(99) + 1);
+        }
+
+        double promedio = calcularPromedio(numeros);
+
+        System.out.println("\nEl promedio de los números es: " + promedio);
+    }
+
+    public static double calcularPromedio(ArrayList<Integer> lista) {
+        int suma = 0;
+
+        for (int numero : lista) {
+            suma += numero;
+        }
+
+        return (double) suma / lista.size();
+    }
+}
 
 // Crea un ArrayList de enteros y ordénalo de forma ascendente.
+class TP9Ejercicio22 {
+    public static void main(String[] args) {
+        Random rnd = new Random();
+
+        ArrayList<Integer> numeros = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
+            numeros.add(rnd.nextInt(99) + 1);
+        }
+
+        bubbleSort(numeros);
+
+        System.out.println("\nArrayList ordenado de forma ascendente:");
+
+        for (int numero : numeros) {
+            System.out.println(numero);
+        }
+    }
+
+    public static void bubbleSort(ArrayList<Integer> lista) {
+        int n = lista.size();
+        boolean intercambio;
+        do {
+            intercambio = false;
+            for (int i = 1; i < n; i++) {
+                if (lista.get(i - 1) > lista.get(i)) {
+                    int temp = lista.get(i - 1);
+                    lista.set(i - 1, lista.get(i));
+                    lista.set(i, temp);
+                    intercambio = true;
+                }
+            }
+            n--;
+        } while (intercambio);
+    }
+}
 
 // Crea un ArrayList de números enteros y elimina todos los elementos mayores
 // que un valor específico.
+class TP9Ejercicio23 {
+    public static void main(String[] args) {
+        Random rnd = new Random();
+
+        ArrayList<Integer> numeros = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
+            numeros.add(rnd.nextInt(99) + 1);
+        }
+
+        int valorMaximo = numeros.get(3);
+
+        for (int i = 0; i < numeros.size(); i++) {
+            if (numeros.get(i) > valorMaximo) {
+                numeros.remove(i);
+                i--;
+            }
+        }
+
+        System.out.println("\nNúmeros menores que " + valorMaximo + ":");
+
+        for (int numero : numeros) {
+            System.out.println(numero);
+        }
+    }
+}
 
 // Encuentra la cantidad de veces que un elemento específico aparece en un
 // ArrayList de cadenas.
+class TP9Ejercicio24 {
+    public static void main(String[] args) {
+
+        Random rnd = new Random();
+
+        ArrayList<String> nombres = new ArrayList<>();
+
+        nombres.add("Juan");
+        nombres.add("María");
+        nombres.add("Carlos");
+        nombres.add("Juan");
+        nombres.add("Juan");
+        nombres.add("Carlos");
+
+        String elementoBuscado = nombres.get(rnd.nextInt(5));
+
+        int contador = 0;
+
+        for (String nombre : nombres) {
+            if (nombre.equals(elementoBuscado)) {
+                contador++;
+            }
+        }
+
+        System.out.println("\nEl elemento '" + elementoBuscado + "' aparece " + contador + " veces.");
+    }
+}
 
 // Crea un ArrayList de cadenas y ordena las cadenas alfabéticamente.
+class TP9Ejercicio25 {
+    public static void main(String[] args) {
+
+        ArrayList<String> nombres = new ArrayList<>();
+
+        nombres.add("Juan");
+        nombres.add("María");
+        nombres.add("Carlos");
+        nombres.add("Jose");
+        nombres.add("Alejandra");
+        nombres.add("Sofia");
+
+        ordenarArrayList(nombres);
+
+        System.out.println("\nCadenas ordenadas alfabéticamente:");
+        for (String nombre : nombres) {
+            System.out.println(nombre);
+        }
+    }
+
+    public static void ordenarArrayList(ArrayList<String> lista) {
+        int n = lista.size();
+        boolean intercambio;
+
+        do {
+            intercambio = false;
+
+            for (int i = 0; i < n - 1; i++) {
+                if (lista.get(i).compareTo(lista.get(i + 1)) > 0) {
+                    String temp = lista.get(i);
+                    lista.set(i, lista.get(i + 1));
+                    lista.set(i + 1, temp);
+                    intercambio = true;
+                }
+            }
+
+            n--;
+        } while (intercambio);
+    }
+}
