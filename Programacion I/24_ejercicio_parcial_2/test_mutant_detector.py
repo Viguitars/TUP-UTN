@@ -31,7 +31,6 @@ def test_is_valid_dna_matrix(dna, expected):
         (["123456", "ACTGVBN", "QQS", "ACACAC", "TGTGTG", "AAAAAA"], False),
         (["ATCCAG", "CCTTTT", "ATGGAC", "AACTGT", "CGAGTA", "ACTAAG"], True),
         (["ATATAT", "CGCGCG", "AAAAAA", "CGCGCG", "ATATAT", "CGCGCG"], False),
-        (["123456", "ACTGVBN", "QQS", "ACACAC", "TGTGTG", "AAAAAA"], False),
     ],
 )
 def test_is_mutant(dna, expected):
