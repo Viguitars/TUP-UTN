@@ -4,6 +4,8 @@ class MutantDetector:
         self.dna_matrix = []
         # Contador para secuencias de cuatro letras iguales encontradas.
         self.sequences_found = 0
+        # Conjunto para almacenar las letras de las secuencias encontradas.
+        self.letters_of_the_sequences_found = set()
 
     def get_dna_from_user(self):
         # Solicita al usuario que ingrese las secuencias de ADN.
@@ -52,8 +54,12 @@ class MutantDetector:
                     return True
 
                 # Inicia la búsqueda en profundidad desde la celda actual.
-                if self._dfs(i, j, -1, self.dna_matrix[i][j], 0):
-                    # Incrementa el contador si se encuentra una secuencia.
+                if (
+                    self._dfs(i, j, -1, self.dna_matrix[i][j], 0)
+                    and self.dna_matrix[i][j] != self.letters_of_the_sequences_found
+                ):
+                    # Incrementa el contador si se encuentra una secuencia que
+                    # no haya sido encontrada anteriormente.
                     self.sequences_found += 1
 
         # Retorna True si se encontraron más de una secuencia, False en caso contrario.
@@ -87,7 +93,11 @@ class MutantDetector:
 
         # Si hemos alcanzado la profundidad de 4, hemos encontrado una secuencia completa.
         if depth == 4:
-            return True
+            current_letter = self.dna_matrix[i][j]
+            # Agrega la letra actual al conjunto si no ha sido encontrada antes.
+            if current_letter not in self.letters_of_the_sequences_found:
+                self.letters_of_the_sequences_found.add(current_letter)
+                return True
 
         # Define las 8 posibles direcciones de movimiento (i, j).
         directions = [
