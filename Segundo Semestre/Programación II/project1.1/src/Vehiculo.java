@@ -41,7 +41,5 @@ public abstract class Vehiculo {
     }
 
     // Método
-    public void caracteristicas() {
-        System.out.println("Soy un vehiculo.");
-    }
+    public abstract void caracteristicas();
 }
