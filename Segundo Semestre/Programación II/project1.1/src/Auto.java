@@ -9,7 +9,8 @@ public class Auto extends Vehiculo {
         this.descapotable = descapotable;
     }
 
-    public Auto(String propietario, int puertas, int ruedas, boolean descapotable) {
+    public Auto(String propietario, int puertas, int ruedas,
+                boolean descapotable) {
         super(propietario, puertas, ruedas);
         this.descapotable = descapotable;
     }
@@ -26,7 +27,15 @@ public class Auto extends Vehiculo {
 
     }
 
+    @Override
     public void caracteristicas() {
+        System.out.println("Puertas: " + this.getPuertas());
+        System.out.println("Ruedas: " + this.getRuedas());
+        if (isDescapotable()) {
+            System.out.println("El auto es descapotable");
+        } else {
+            System.out.println("El auto no es descapotable.");
+        }
 
     }
 
