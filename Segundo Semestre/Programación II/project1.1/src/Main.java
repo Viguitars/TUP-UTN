@@ -1,15 +1,15 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Auto a1 = new Auto("Victor Gomenza", 3, 4, true);
+        Camion c1 = new Camion("Alejandra Segovia", 2, 18, 950);
+
+        System.out.println("El auto tiene: " + a1.getPuertas() + " puertas, " + a1.getRuedas() + " ruedas y su dueño es " + a1.getPropietario() + ".");
+        System.out.println();
+        System.out.println("El camion de " + c1.getPropietario() + " tiene " +
+                "una carga de " + c1.getCarga() + " kilos.");
+        c1.caracteristicas();
+        ;
+
     }
 }
