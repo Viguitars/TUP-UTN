@@ -1,6 +1,9 @@
 public class Camion extends Vehiculo {
     private float carga;
 
+    public Camion() {
+    }
+
     public Camion(float carga) {
         this.carga = carga;
     }
@@ -18,7 +21,13 @@ public class Camion extends Vehiculo {
         this.carga = carga;
     }
 
+    @Override
     public void caracteristicas() {
+        if (carga >= 1000) {
+            System.out.println("El camion esta sobrecargado");
+        } else {
+            System.out.println("Puede continuar.");
+        }
 
     }
 
