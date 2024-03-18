@@ -1,30 +1,11 @@
-# Bytecode
-*.class
-
-# Compiled files
-*.war
-*.ear
-*.jar
-
-# IntelliJ IDEA
-.idea/
-*.iml
-*.iws
-*.ipr
-
-# Eclipse
-.classpath
-.project
-.settings/
-
-# Maven
-target/
-
-
-# Byte-compiled / optimized / DLL files
+# Python Bytecode, Compiled files, and Virtual Environment
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.pyc
 
 # Caché de archivos compilados
 *.mo
@@ -41,3 +22,18 @@ test_output/
 
 # Dependencias y directorios generados
 venv/
+target/
+
+# Java Bytecode, Compiled files, and IDE
+*.class
+*.war
+*.ear
+*.jar
+.idea/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+
