@@ -9,13 +9,13 @@ import java.util.Scanner;
  */
 public class Ejercicio2 {
     public static void main(String[] args) {
-        // Create a Scanner objet to read user input
+
         Scanner sc = new Scanner(System.in);
-        // Display the options
+
         System.out.println("Temperature Converter");
         System.out.println("1. Celsius to Fahrenheit");
         System.out.println("2. Fahrenheit to Celsius");
-        // Prompt the user fot the option
+
         System.out.println("Choose an option (1-2):");
         int choice = sc.nextInt();
 
@@ -37,12 +37,10 @@ public class Ejercicio2 {
         }
     }
 
-    // Method to convert Celsius to Fahrenheit
     private static double celsiusToFahrenheit(double celsius) {
         return (celsius * 9 / 5) + 32;
     }
 
-    // Method to convert Fahrenheit to Celsius
     private static double fahrenheitToCelsius(double fahrenheit) {
         return (fahrenheit - 32) * 5 / 9;
     }
