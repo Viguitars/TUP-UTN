@@ -1,3 +1,4 @@
+
 public class Camion extends Vehiculo {
     private float carga;
 
@@ -35,3 +36,4 @@ public class Camion extends Vehiculo {
 
     }
 }
+

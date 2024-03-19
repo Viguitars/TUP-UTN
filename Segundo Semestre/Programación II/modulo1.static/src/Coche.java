@@ -69,25 +69,21 @@ public class Coche {
     public void Arrancar() {
     }
 
-    ;
 
     public void Detenerse() {
     }
 
-    ;
 
     public void Acelerar() {
     }
 
-    ;
 
     public void Frenar() {
     }
 
-    ;
 
     public void verPrecio() {
     }
 
-    ;
+
 }

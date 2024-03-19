@@ -72,7 +72,7 @@ public class Vuelo {
     }
 
     public void cancelarReserva() {
-        
+
     }
 
 }
