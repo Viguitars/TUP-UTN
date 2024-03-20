@@ -27,16 +27,13 @@ public class Camion extends Vehiculo {
     @Override
     public void caracteristicas() {
         if (carga >= 1000) {
-            System.out.println("El camion esta sobrecargado");
+            System.out.println("El camión esta sobrecargado");
         } else {
             System.out.println("Puede continuar.");
         }
 
     }
 
-    public void cargar() {
-
-    }
 }
 
 
