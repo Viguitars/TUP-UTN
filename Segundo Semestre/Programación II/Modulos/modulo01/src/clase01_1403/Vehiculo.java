@@ -2,9 +2,9 @@ package clase01_1403;
 
 public abstract class Vehiculo {
     // Atributos
-    private String propietario;
-    private int puertas;
-    private int ruedas;
+    protected String propietario;
+    protected int puertas;
+    protected int ruedas;
 
     //Constructor Vació
     public Vehiculo() {
