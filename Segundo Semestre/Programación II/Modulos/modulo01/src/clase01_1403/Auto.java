@@ -25,14 +25,11 @@ public class Auto extends Vehiculo {
         this.descapotable = descapotable;
     }
 
-    public void bajar() {
-
-    }
-
     @Override
     public void caracteristicas() {
         System.out.println("Puertas: " + this.getPuertas());
         System.out.println("Ruedas: " + this.getRuedas());
+        System.out.println("El propietario del auto es: " + this.getPropietario());
         if (isDescapotable()) {
             System.out.println("El auto es descapotable");
         } else {
