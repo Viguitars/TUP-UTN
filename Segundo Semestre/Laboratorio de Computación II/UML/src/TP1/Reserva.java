@@ -3,33 +3,35 @@ package TP1;
 import java.util.Date;
 
 public class Reserva {
-    private int codigoReserva;
-    private Date fechaReserva;
+    private int codigo;
+    private Date fecha;
     private Vuelo vuelo;
+    private Pasajero pasajero;
 
     public Reserva() {
     }
 
-    public Reserva(int codigoReserva, Date fechaReserva, Vuelo vuelo) {
-        this.codigoReserva = codigoReserva;
-        this.fechaReserva = fechaReserva;
+    public Reserva(int codigo, Date fecha, Vuelo vuelo, Pasajero pasajero) {
+        this.codigo = codigo;
+        this.fecha = fecha;
         this.vuelo = vuelo;
+        this.pasajero = pasajero;
     }
 
-    public int getCodigoReserva() {
-        return codigoReserva;
+    public int getCodigo() {
+        return codigo;
     }
 
-    public void setCodigoReserva(int codigoReserva) {
-        this.codigoReserva = codigoReserva;
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
-    public Date getFechaReserva() {
-        return fechaReserva;
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setFechaReserva(Date fechaReserva) {
-        this.fechaReserva = fechaReserva;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
     public Vuelo getVuelo() {
@@ -40,13 +42,21 @@ public class Reserva {
         this.vuelo = vuelo;
     }
 
+    public Pasajero getPasajero() {
+        return pasajero;
+    }
+
+    public void setPasajero(Pasajero pasajero) {
+        this.pasajero = pasajero;
+    }
+
     public void realizarReseva() {
-        System.out.println("Reserva realizada con éxito para el vuelo " + vuelo.getNumeroVuelo());
+        System.out.println("Reserva realizada con éxito para el vuelo " + vuelo.getNumero());
 
     }
 
     public void cancelarReserva() {
-        System.out.println("Reserva cancelada para el vuelo " + vuelo.getNumeroVuelo());
+        System.out.println("Reserva cancelada para el vuelo " + vuelo.getNumero());
 
     }
 }

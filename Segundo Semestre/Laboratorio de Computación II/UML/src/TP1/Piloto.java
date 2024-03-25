@@ -1,7 +1,7 @@
 package TP1;
 
 public class Piloto extends Persona implements Volador {
-    private int codigoPiloto;
+    private int codigo;
     private int horasVuelo;
     private boolean enVuelo;
     private int altitud;
@@ -9,40 +9,23 @@ public class Piloto extends Persona implements Volador {
     public Piloto() {
     }
 
-    public Piloto(int codigoPiloto, int horasVuelo) {
-        this.codigoPiloto = codigoPiloto;
-        this.horasVuelo = horasVuelo;
-    }
 
-    public Piloto(String nombre, int edad, int codigoPiloto, int horasVuelo) {
+
+    public Piloto(String nombre, int edad, int codigo, int horasVuelo) {
         super(nombre, edad);
-        this.codigoPiloto = codigoPiloto;
+        this.codigo = codigo;
         this.horasVuelo = horasVuelo;
     }
 
-    public Piloto(int codigoPiloto, int horasVuelo, boolean enVuelo,
-                  int altitud) {
-        this.codigoPiloto = codigoPiloto;
-        this.horasVuelo = horasVuelo;
-        this.enVuelo = enVuelo;
-        this.altitud = altitud;
+
     }
 
-    public Piloto(String nombre, int edad, int codigoPiloto, int horasVuelo,
-                  boolean enVuelo, int altitud) {
-        super(nombre, edad);
-        this.codigoPiloto = codigoPiloto;
-        this.horasVuelo = horasVuelo;
-        this.enVuelo = enVuelo;
-        this.altitud = altitud;
+    public int getCodigo() {
+        return codigo;
     }
 
-    public int getCodigoPiloto() {
-        return codigoPiloto;
-    }
-
-    public void setCodigoPiloto(int codigoPiloto) {
-        this.codigoPiloto = codigoPiloto;
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public int getHorasVuelo() {

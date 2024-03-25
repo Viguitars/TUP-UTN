@@ -3,39 +3,40 @@ package TP1;
 import java.util.Date;
 
 public class Vuelo {
-    private String numeroVuelo;
-    private Date fechaSalida;
+    private String numero;
+    private Date fecha;
     private String origen;
     private String destino;
     private Avion avion; // Asociación con la clase Avión
+    private Piloto piloto;
 
     public Vuelo() {
 
     }
 
-    public Vuelo(String numeroVuelo, Date fechaSalida, String origen,
-                 String destino, Avion avion) {
-        this.numeroVuelo = numeroVuelo;
-        this.fechaSalida = fechaSalida;
+    public Vuelo(String numero, Date fecha, String origen, String destino,
+                 Avion avion) {
+        this.numero = numero;
+        this.fecha = fecha;
         this.origen = origen;
         this.destino = destino;
         this.avion = avion;
     }
 
-    public String getNumeroVuelo() {
-        return numeroVuelo;
+    public String getNumero() {
+        return numero;
     }
 
-    public void setNumeroVuelo(String numeroVuelo) {
-        this.numeroVuelo = numeroVuelo;
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
-    public Date getFechaSalida() {
-        return fechaSalida;
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setFechaSalida(Date fechaSalida) {
-        this.fechaSalida = fechaSalida;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
     public String getOrigen() {
@@ -62,13 +63,21 @@ public class Vuelo {
         this.avion = avion;
     }
 
+    public Piloto getPiloto() {
+        return piloto;
+    }
+
+    public void setPiloto(Piloto piloto) {
+        this.piloto = piloto;
+    }
+
     public void realizarReseva() {
-        System.out.println("Reserva realizada para el vuelo " + numeroVuelo);
+        System.out.println("Reserva realizada para el vuelo " + numero);
 
     }
 
     public void cancelarReserva() {
-        System.out.println("Reserva cancelada para el vuelo " + numeroVuelo);
+        System.out.println("Reserva cancelada para el vuelo " + numero);
 
     }
 
