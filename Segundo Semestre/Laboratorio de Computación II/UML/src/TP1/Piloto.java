@@ -10,14 +10,26 @@ public class Piloto extends Persona implements Volador {
     }
 
 
-
     public Piloto(String nombre, int edad, int codigo, int horasVuelo) {
         super(nombre, edad);
         this.codigo = codigo;
         this.horasVuelo = horasVuelo;
     }
 
+    public Piloto(int codigo, int horasVuelo, boolean enVuelo, int altitud) {
+        this.codigo = codigo;
+        this.horasVuelo = horasVuelo;
+        this.enVuelo = enVuelo;
+        this.altitud = altitud;
+    }
 
+    public Piloto(String nombre, int edad, int codigo, int horasVuelo,
+                  boolean enVuelo, int altitud) {
+        super(nombre, edad);
+        this.codigo = codigo;
+        this.horasVuelo = horasVuelo;
+        this.enVuelo = enVuelo;
+        this.altitud = altitud;
     }
 
     public int getCodigo() {
