@@ -1,3 +1,5 @@
+package clases.clase01_1403;
+
 public class Persona {
     // Atributos
     private String nombre;
