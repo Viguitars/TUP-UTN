@@ -1,6 +1,9 @@
 public class CheckingAccount extends Account {
     private float overdraft;
 
+    public CheckingAccount() {
+    }
+
     public CheckingAccount(float balance, float annualInterestRate) {
         super(balance, annualInterestRate);
         this.overdraft = 0;

@@ -1,9 +1,6 @@
 public class SavingsAccount extends Account {
     private final boolean active;
 
-    public SavingsAccount() {
-    }
-
     public SavingsAccount(float balance, float annualInterestRate) {
         super(balance, annualInterestRate);
         this.active = balance >= 10000;
