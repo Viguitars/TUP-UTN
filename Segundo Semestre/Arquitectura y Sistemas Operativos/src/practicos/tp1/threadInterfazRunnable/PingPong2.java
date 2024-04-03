@@ -1,4 +1,4 @@
-package practicos.tp1.PingPong2;
+package practicos.tp1.threadInterfazRunnable;
 
 import static java.lang.Thread.sleep;
 
