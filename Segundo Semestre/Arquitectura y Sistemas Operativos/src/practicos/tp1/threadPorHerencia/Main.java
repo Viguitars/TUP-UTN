@@ -1,4 +1,4 @@
-package practicos.tp1.PingPong1;
+package practicos.tp1.threadPorHerencia;
 
 public class Main {
     public static void main(String[] args) {
