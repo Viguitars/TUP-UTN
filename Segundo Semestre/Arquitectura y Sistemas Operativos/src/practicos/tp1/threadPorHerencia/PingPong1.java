@@ -1,4 +1,4 @@
-package practicos.tp1.PingPong1;
+package practicos.tp1.threadPorHerencia;
 
 public class PingPong1 extends Thread {
     private final String word; // Lo que va a escribir.
