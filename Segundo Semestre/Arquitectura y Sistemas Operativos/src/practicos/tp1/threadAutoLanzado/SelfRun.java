@@ -1,4 +1,4 @@
-package practicos.tp1.SelfRun;
+package practicos.tp1.threadAutoLanzado;
 
 public class SelfRun implements Runnable {
     private final Thread internalThread;
