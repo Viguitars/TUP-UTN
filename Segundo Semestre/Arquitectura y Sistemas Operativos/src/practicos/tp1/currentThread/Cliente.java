@@ -1,4 +1,4 @@
-package practicos.tp1.Cliente;
+package practicos.tp1.currentThread;
 
 public class Cliente extends Thread {
     public void run() {
