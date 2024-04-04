@@ -3,7 +3,7 @@ package clases.clase04_0304.Ejercicio2_3;
 import java.util.Random;
 
 public class Proceso extends Thread {
-    private static final int tam = 8;
+    private static final int tam = 800;
     private static final int[][] matriz = new int[tam][tam];
     private static double tiempo_inicio, tiempo_final;
     private int ini, fin;
