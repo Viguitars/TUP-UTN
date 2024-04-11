@@ -1,9 +1,9 @@
-package Ejercicio4_1;
+package clases.clase05_1004.Ejercicio4_1;
 
-public class Proceso1 implements Runnable{
+public class Proceso1 implements Runnable {
 
-     private static Monitor1 mon = new Monitor1();
-     private int id;
+    private static Monitor1 mon = new Monitor1();
+    private int id;
 
     public Proceso1(int id) {
         this.id = id;
@@ -12,18 +12,13 @@ public class Proceso1 implements Runnable{
     @Override
     public void run() {
 
-         int cont =mon.inc(20000);
+        int cont = mon.inc(20000);
 
         System.out.println(cont);
 
         mon.ordenar(id);
 
-               }
+    }
 
 
-           }
-
-        
-
-
-
+}
