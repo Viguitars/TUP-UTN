@@ -1,16 +1,17 @@
-package Ejercicio4_1;
+package clases.clase05_1004.Ejercicio4_1;
 
 public class Monitor0 {
 
-    private int cont =0;
-//Se simplifica la concurrencia
-   public synchronized  void inc(){
+    private int cont = 0;
+
+    //Se simplifica la concurrencia
+    public synchronized void inc() {
         for (int i = 0; i < 20000; i++) {
-             cont++;
+            cont++;
         }
     }
-    public synchronized int getCont()
-    {
+
+    public synchronized int getCont() {
         return cont;
     }
 }
