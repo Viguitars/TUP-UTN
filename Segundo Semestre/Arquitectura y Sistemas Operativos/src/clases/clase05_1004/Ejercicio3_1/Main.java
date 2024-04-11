@@ -1,4 +1,4 @@
-package Ejercicio3_1;
+package clases.clase05_1004.Ejercicio3_1;
 
 public class Main {
 
