@@ -6,7 +6,7 @@ public class Main {
 //            Se crea un array de cinco elementos
             int[] numeros = new int[5];
 
-//            Se intenta acceder al elemento seis del array (indice fuera de bounds)
+//            Se intenta acceder al elemento seis del array (índice fuera de bounds)
             int numero = numeros[6];
 
             System.out.println("El número es: " + numero);
