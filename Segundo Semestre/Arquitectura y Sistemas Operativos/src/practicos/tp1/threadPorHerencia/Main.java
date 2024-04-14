@@ -22,7 +22,6 @@ public class Main {
 
 /**
  * El programa crea dos hilos secundarios que imprimen las palabras "PING" y
- * "PONG" de forma intercalada en la consola durante dos segundos. Cada hilo
- * imprime su palabra asociada repetidamente, con un cierto retraso entre cada
- * impresión.
+ * "PONG" cada 33 y 10 milisegundos respectivamente en la consola durante dos
+ * segundos.
  */
