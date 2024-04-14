@@ -3,8 +3,8 @@ package practicos.tp1.threadPorHerencia;
 public class Main {
     public static void main(String[] args) {
         // Declaración de 2 threads
-        PingPong1 t1 = new PingPong1("PING", 33);
-        PingPong1 t2 = new PingPong1("PONG", 10);
+        PingPong t1 = new PingPong("PING", 33);
+        PingPong t2 = new PingPong("PONG", 10);
         // Activación
         t1.start();
         t2.start();
