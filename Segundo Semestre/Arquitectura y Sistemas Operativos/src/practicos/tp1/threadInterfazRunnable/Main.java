@@ -12,12 +12,19 @@ public class Main {
         // Se activan los threads
         t1.start();
         t2.start();
+        // Espera 2 segundos
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+        }
+        // Finaliza la ejecución de los threads
+        t1.stop();
+        t2.stop();
     }
 }
 
 /**
  * El programa crea dos hilos secundarios que imprimen las palabras "PING" y
- * "PONG" de forma intercalada en la consola en un ciclo infinito. Cada hilo
- * imprime su palabra asociada repetidamente, con un cierto retraso entre cada
- * impresión.
+ * "PONG" cada 33 y 10 milisegundos respectivamente en la consola durante dos
+ * segundos.
  */
