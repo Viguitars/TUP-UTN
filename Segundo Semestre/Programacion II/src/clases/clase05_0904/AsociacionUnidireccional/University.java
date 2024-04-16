@@ -6,8 +6,4 @@ public class University {
     public University(String name) {
         this.name = name;
     }
-
-    public String getName() {
-        return name;
-    }
 }
