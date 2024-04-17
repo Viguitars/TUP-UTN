@@ -1,6 +1,6 @@
-package practicos.tp3.excepcionDosNiveles;
+package practicos.tp3.EjercicioA7;
 
-public class Main5 {
+public class Main {
     public static void main(String[] args) {
         try {
             // Simulamos una situación que puede lanzar la excepción base

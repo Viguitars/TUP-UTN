@@ -1,6 +1,6 @@
 package practicos.tp3;
 
-public class Main2 {
+public class EjercicioA3 {
     public static void main(String[] args) {
         String aux = "hola";
         try {

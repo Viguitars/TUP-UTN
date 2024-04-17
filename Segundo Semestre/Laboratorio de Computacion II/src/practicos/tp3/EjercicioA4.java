@@ -3,7 +3,7 @@ package practicos.tp3;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Main3 {
+public class EjercicioA4 {
     public static void main(String[] args) {
         try {
             // Intentamos abrir un archivo que no existe

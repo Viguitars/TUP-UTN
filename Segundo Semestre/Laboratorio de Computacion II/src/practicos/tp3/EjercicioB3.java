@@ -2,7 +2,7 @@ package practicos.tp3;
 
 import java.util.Random;
 
-public class Main9 {
+public class EjercicioB3 {
     public static void main(String[] args) {
         try {
             int numeroAleatorio = generarNumeroAleatorio();

@@ -1,6 +1,6 @@
 package practicos.tp3;
 
-public class Main1 {
+public class EjercicioA2 {
     public static void main(String[] args) {
         try {
             // Intentamos dividir por cero, lo que generará una excepción

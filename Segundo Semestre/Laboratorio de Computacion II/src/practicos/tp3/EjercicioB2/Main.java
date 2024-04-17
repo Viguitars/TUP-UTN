@@ -1,6 +1,6 @@
-package practicos.tp3.miException;
+package practicos.tp3.EjercicioB2;
 
-public class Main8 {
+public class Main {
     public static void main(String[] args) {
         // Ejemplo de uso de las excepciones
         try {

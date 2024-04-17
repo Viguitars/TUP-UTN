@@ -1,6 +1,6 @@
 package practicos.tp3;
 
-public class Main4 {
+public class EjercicioA5 {
 
     public void nestedExceptionMethod(int value) {
         try {
@@ -27,7 +27,7 @@ public class Main4 {
     }
 
     public static void main(String[] args) {
-        Main4 example = new Main4();
+        EjercicioA5 example = new EjercicioA5();
         example.nestedExceptionMethod(0);
     }
 }

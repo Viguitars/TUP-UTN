@@ -1,6 +1,6 @@
-package practicos.tp3.CustomException;
+package practicos.tp3.EjercicioB4;
 
-public class Main10 {
+public class Main {
     static void methodFour() throws CustomException {
         throw new CustomException("Exception thrown in method four");
     }
