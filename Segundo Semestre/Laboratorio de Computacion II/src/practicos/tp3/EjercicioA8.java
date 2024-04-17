@@ -1,7 +1,6 @@
 package practicos.tp3;
 
 public class Main6 {
-
     public static int devuelveNumero(int num) {
         try {
             if (num % 2 == 0) {
