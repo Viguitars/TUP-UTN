@@ -16,8 +16,8 @@ public class Process extends Thread {
 
     public void run() {
         try {
-            semaphore.acquire();// Adquirir el semáforo antes de acceder al
-            // recurso compartido
+            // Adquirir el semáforo antes de acceder al recurso compartido
+            semaphore.acquire();
             if (isIncrementing) {
                 resource.increment();
                 System.out.println("Aumentar: " + resource.getCount());
@@ -25,8 +25,8 @@ public class Process extends Thread {
                 resource.decrement();
                 System.out.println("Disminuir: " + resource.getCount());
             }
-            semaphore.release();// Liberar el semáforo después de acceder al
-            // recurso compartido
+            // Liberar el semáforo después de acceder al recurso compartido
+            semaphore.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
