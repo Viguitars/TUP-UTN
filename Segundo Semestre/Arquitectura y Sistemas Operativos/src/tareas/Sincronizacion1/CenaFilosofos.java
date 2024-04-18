@@ -1,4 +1,4 @@
-package tareas.Sincronizacion;
+package tareas.Sincronizacion1;
 
 import java.util.concurrent.Semaphore;
 
