@@ -1,9 +1,9 @@
-package clases.clase08_2304;
+package clases.clase08_2304.EjercicioExcepciones;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class EjercicioOpcion2 {
+public class Ejercicio {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
