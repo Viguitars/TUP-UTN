@@ -1,37 +1,21 @@
 # Datos
-carreras <-
-  c("Medicina", "Derecho", "Ciencias", "Letras", "Inef", "Otras")
-alumnos <- c(250, 176, 127, 314, 103, 30)
+carrera <-
+  c(
+    rep("Medicina", 250),
+    rep("Derecho", 176),
+    rep("Ciencias", 127),
+    rep("Letras", 314),
+    rep("Inef", 103),
+    rep("Otras", 30)
+  )
 
-# Frecuencia
-frecuencia <- alumnos
-
-# Frecuencia relativa
-frecuencia_relativa <- alumnos / sum(alumnos)
-
-# Frecuencia acumulada
-frecuencia_acumulada <- cumsum(frecuencia)
-
-# Frecuencia acumulada relativa
-frecuencia_acumulada_relativa <- cumsum(frecuencia_relativa)
-
-# Crear un dataframe con los datos
-datos <- data.frame(
-  Carrera = carreras,
-  Alumnos = alumnos,
-  f = frecuencia,
-  fr = frecuencia_relativa,
-  F = frecuencia_acumulada,
-  Fr = frecuencia_acumulada_relativa
-)
-
-# Imprimir datos
-print(datos)
+# Frecuencias
+frecuencia <- table(carrera)
+frecuencia_relativa <- frecuencia / length(carrera)
 
 # Graficar la frecuencia
 barplot(
   frecuencia,
-  names.arg = carreras,
   col = "skyblue",
   xlab = "Carreras",
   ylab = "Número de alumnos",
