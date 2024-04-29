@@ -22,10 +22,10 @@ public class StudentManagementSystem {
             int option = 0;
             try {
                 option = scanner.nextInt();
-                scanner.nextLine(); // Consume newline character
+                scanner.nextLine();
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a number.");
-                scanner.nextLine(); // Clear input buffer
+                scanner.nextLine();
                 continue;
             }
 
@@ -62,22 +62,22 @@ public class StudentManagementSystem {
         int age = 0;
         try {
             age = scanner.nextInt();
-            scanner.nextLine(); // Consume newline character
+            scanner.nextLine();
         } catch (InputMismatchException e) {
             System.out.println(
                     "Invalid input for age. Please enter a valid number.");
-            scanner.nextLine(); // Clear input buffer
+            scanner.nextLine();
             return;
         }
         System.out.print("Grade: ");
         double grade = 0;
         try {
             grade = scanner.nextDouble();
-            scanner.nextLine(); // Consume newline character
+            scanner.nextLine();
         } catch (InputMismatchException e) {
             System.out.println(
                     "Invalid input for grade. Please enter a valid number.");
-            scanner.nextLine(); // Clear input buffer
+            scanner.nextLine();
             return;
         }
 
