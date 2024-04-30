@@ -55,8 +55,9 @@ public class Main {
             System.out.println(
                     "     - " + athlete.getName() + ": " + athlete.getHeight() +
                             " metros.");
-            System.out.println("      ¿" + athlete.getName() + " tiene peso extra? " +
-                    athlete.hasExtraWeight(athlete.getWeight()));
+            System.out.println(
+                    "      ¿" + athlete.getName() + " tiene peso extra? " +
+                            athlete.hasExtraWeight(athlete.getWeight()));
         }
     }
 }
