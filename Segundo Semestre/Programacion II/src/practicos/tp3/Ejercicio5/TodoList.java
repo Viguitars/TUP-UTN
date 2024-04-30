@@ -90,11 +90,11 @@ public class TodoList implements Iterable<Task> {
         int priority = 0;
         try {
             priority = scanner.nextInt();
-            scanner.nextLine(); // Consume newline character
+            scanner.nextLine();
         } catch (Exception e) {
             System.out.println(
                     "Invalid input for priority. Please enter a valid number.");
-            scanner.nextLine(); // Clear input buffer
+            scanner.nextLine();
             return;
         }
         Task newTask = new Task(description, priority);
