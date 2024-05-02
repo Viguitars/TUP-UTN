@@ -1,24 +1,25 @@
 package practicos.tp3.Ejercicio1;
 
-public class Subject {
+public class Course {
+    // Atributos
     private int classroom;
     private String time;
     private String name;
     private Teacher teacher;
     private Group group;
 
-    public Subject() {
+    // Constructor Vació
+    public Course() {
     }
 
-    public Subject(int classroom, String time, String name, Teacher teacher,
-                   Group group) {
+    // Constructos Sobrecargado
+    public Course(int classroom, String time, String name) {
         this.classroom = classroom;
         this.time = time;
         this.name = name;
-        this.teacher = teacher;
-        this.group = group;
     }
 
+    // Getters y Setters de los atributos
     public int getClassroom() {
         return classroom;
     }
@@ -43,6 +44,10 @@ public class Subject {
         this.name = name;
     }
 
+    public Group getGroup() {
+        return group;
+    }
+
     public Teacher getTeacher() {
         return teacher;
     }
@@ -51,11 +56,17 @@ public class Subject {
         this.teacher = teacher;
     }
 
-    public Group getGroup() {
-        return group;
-    }
-
     public void setGroup(Group group) {
         this.group = group;
+    }
+
+    // Método para asignar un grupo a la asignatura
+    public void assignGroup(Group group) {
+        this.group = group;
+    }
+
+    // Método para asignar un profesor a la asignatura
+    public void assignTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
 }
