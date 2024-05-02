@@ -1,24 +1,29 @@
 package practicos.tp3.Ejercicio1;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Student extends Person{
-    private ArrayList<Group> groups;
+public class Student extends Person {
+    // Atributos
+    private List<Group> groups;
 
-    public Student(ArrayList<Group> groups) {
-        this.groups = groups;
+    // Constructores
+    public Student() {
+        groups = new ArrayList<>();
     }
 
-    public Student(int identityDocument, String name, ArrayList<Group> groups) {
-        super(identityDocument, name);
-        this.groups = groups;
+    public Student(int dni, String name) {
+        super(dni, name);
+        this.groups = new ArrayList<>();
     }
 
-    public ArrayList<Group> getGroups() {
+    // Método para obtener la lista de grupos en las que está el alumno
+    public List<Group> getGroups() {
         return groups;
     }
 
-    public void setGroups(ArrayList<Group> groups) {
-        this.groups = groups;
+    // Método para agregar un grupo a la lista de grupos del alumno
+    public void addGroup(Group group) {
+        groups.add(group);
     }
 }
