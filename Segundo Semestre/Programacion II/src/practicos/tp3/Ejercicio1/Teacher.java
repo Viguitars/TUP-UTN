@@ -1,36 +1,40 @@
 package practicos.tp3.Ejercicio1;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Teacher extends Person {
-    private String departament;
-    private ArrayList<Subject> subjects;
+    // Atributos
+    private String department;
+    private List<Course> teaches;
 
-    public Teacher(String departament, ArrayList<Subject> subjects) {
-        this.departament = departament;
-        this.subjects = subjects;
+    // Constructores
+    public Teacher() {
+        teaches = new ArrayList<>();
     }
 
-    public Teacher(int dni, String name, String departament,
-                   ArrayList<Subject> subjects) {
+    public Teacher(int dni, String name, String department) {
         super(dni, name);
-        this.departament = departament;
-        this.subjects = subjects;
+        this.department = department;
+        this.teaches = new ArrayList<>();
     }
 
-    public String getDepartament() {
-        return departament;
+    // Getters y Setters de los atributos
+    public String getDepartment() {
+        return department;
     }
 
-    public void setDepartament(String departament) {
-        this.departament = departament;
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
-    public ArrayList<Subject> getSubjects() {
-        return subjects;
+    // Método para obtener la lista de asignaturas que imparte el profesor
+    public List<Course> getCourses() {
+        return teaches;
     }
 
-    public void setSubjects(ArrayList<Subject> subjects) {
-        this.subjects = subjects;
+    // Método para agregar una asignatura al profesor
+    public void addCourse(Course course) {
+        teaches.add(course);
     }
 }
