@@ -1,23 +1,27 @@
 package practicos.tp3.Ejercicio1;
 
 public abstract class Person {
-    protected int identityDocument;
+    // Atributos
+    protected int dni;
     protected String name;
 
+    // Constructor Vacío
     public Person() {
     }
 
-    public Person(int identityDocument, String name) {
-        this.identityDocument = identityDocument;
+    // Constructor Sobrecargado
+    public Person(int dni, String name) {
+        this.dni = dni;
         this.name = name;
     }
 
-    public int getIdentityDocument() {
-        return identityDocument;
+    // Getters y Setters de los atributos
+    public int getDni() {
+        return dni;
     }
 
-    public void setIdentityDocument(int identityDocument) {
-        this.identityDocument = identityDocument;
+    public void setDni(int dni) {
+        this.dni = dni;
     }
 
     public String getName() {
@@ -27,5 +31,4 @@ public abstract class Person {
     public void setName(String name) {
         this.name = name;
     }
-
 }
