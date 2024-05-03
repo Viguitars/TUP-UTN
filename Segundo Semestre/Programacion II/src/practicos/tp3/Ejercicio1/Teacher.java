@@ -6,7 +6,7 @@ import java.util.List;
 public class Teacher extends Person {
     // Atributos
     private String department;
-    private List<Course> teaches;
+    private final List<Course> teaches;
 
     // Constructores
     public Teacher() {
