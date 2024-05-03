@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Student extends Person {
     // Atributos
-    private List<Group> groups;
+    private final List<Group> groups;
 
     // Constructores
     public Student() {
