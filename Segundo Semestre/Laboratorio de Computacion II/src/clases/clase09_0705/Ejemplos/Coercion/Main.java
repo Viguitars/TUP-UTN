@@ -1,6 +1,6 @@
-package clases.clase09_0705.Ejemplos;
+package clases.clase09_0705.Ejemplos.Coercion;
 
-public class Coercion {
+public class Main {
     public static void main(String[] args) {
         int a = 3;
         double b = 2.5;
