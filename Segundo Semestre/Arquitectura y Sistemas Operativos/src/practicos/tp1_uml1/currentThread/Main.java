@@ -1,4 +1,4 @@
-package practicos.tp1.currentThread;
+package practicos.tp1_uml1.currentThread;
 
 public class Main {
     public static void main(String[] args) {

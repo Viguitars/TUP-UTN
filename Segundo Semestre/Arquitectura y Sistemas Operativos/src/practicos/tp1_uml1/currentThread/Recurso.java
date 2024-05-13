@@ -1,4 +1,4 @@
-package practicos.tp1.currentThread;
+package practicos.tp1_uml1.currentThread;
 
 public class Recurso {
     static synchronized void uso() {

@@ -1,4 +1,4 @@
-package practicos.tp1.isInterrupted;
+package practicos.tp1_uml1.isInterrupted;
 
 public class InterruptCheck {
     public static void main(String[] args) {

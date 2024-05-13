@@ -1,4 +1,4 @@
-package practicos.tp2.Ejercicio1;
+package practicos.tp2_uml2.Ejercicio1;
 
 public class Animal {
     private String name;

@@ -1,4 +1,4 @@
-package practicos.tp1.InterrupciónDuranteSleep;
+package practicos.tp1_uml1.InterrupciónDuranteSleep;
 
 public class SleepInterrupt implements Runnable {
     public void run() {

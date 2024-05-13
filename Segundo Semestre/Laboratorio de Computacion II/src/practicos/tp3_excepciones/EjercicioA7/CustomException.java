@@ -1,4 +1,4 @@
-package practicos.tp3.EjercicioA7;
+package practicos.tp3_excepciones.EjercicioA7;
 
 class CustomException extends Exception {
     public CustomException(String message) {

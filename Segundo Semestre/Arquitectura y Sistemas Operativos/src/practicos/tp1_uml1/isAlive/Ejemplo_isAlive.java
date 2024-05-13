@@ -1,4 +1,4 @@
-package practicos.tp1.isAlive;
+package practicos.tp1_uml1.isAlive;
 
 public class Ejemplo_isAlive {
     public static void main(String[] args) {

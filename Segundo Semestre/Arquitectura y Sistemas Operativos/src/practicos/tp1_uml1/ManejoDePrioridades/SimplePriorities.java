@@ -1,4 +1,4 @@
-package practicos.tp1.ManejoDePrioridades;
+package practicos.tp1_uml1.ManejoDePrioridades;
 
 public class SimplePriorities extends Thread {
     private int countDown = 5;

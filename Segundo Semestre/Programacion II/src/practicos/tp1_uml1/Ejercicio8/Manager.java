@@ -1,4 +1,4 @@
-package practicos.tp1.Ejercicio8;
+package practicos.tp1_uml1.Ejercicio8;
 
 public class Manager extends Employee {
 

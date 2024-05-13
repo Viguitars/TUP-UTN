@@ -1,4 +1,4 @@
-package practicos.tp3.Ejercicio4;
+package practicos.tp3_excepciones.Ejercicio4;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;

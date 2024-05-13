@@ -1,4 +1,4 @@
-package practicos.tp1.InterrupciónPendienteYSleep;
+package practicos.tp1_uml1.InterrupciónPendienteYSleep;
 
 public class PendingInterrupt {
     public static void main(String[] args) {

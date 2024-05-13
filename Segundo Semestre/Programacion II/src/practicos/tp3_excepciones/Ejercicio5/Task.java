@@ -1,4 +1,4 @@
-package practicos.tp3.Ejercicio5;
+package practicos.tp3_excepciones.Ejercicio5;
 
 class Task {
     private String description;

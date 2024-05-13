@@ -1,4 +1,4 @@
-package practicos.tp1.Ejercicio10;
+package practicos.tp1_uml1.Ejercicio10;
 
 public class Novel extends Book {
 

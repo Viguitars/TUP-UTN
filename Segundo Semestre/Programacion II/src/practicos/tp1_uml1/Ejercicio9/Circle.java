@@ -1,4 +1,4 @@
-package practicos.tp1.Ejercicio9;
+package practicos.tp1_uml1.Ejercicio9;
 
 public class Circle extends GeometricFigure {
 

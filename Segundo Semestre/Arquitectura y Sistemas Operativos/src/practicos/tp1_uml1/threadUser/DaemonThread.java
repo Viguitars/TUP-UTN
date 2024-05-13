@@ -1,4 +1,4 @@
-package practicos.tp1.threadUser;
+package practicos.tp1_uml1.threadUser;
 
 public class DaemonThread implements Runnable {
     public void run() {

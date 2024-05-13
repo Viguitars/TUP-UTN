@@ -1,4 +1,4 @@
-package practicos.tp3.EjercicioB4;
+package practicos.tp3_excepciones.EjercicioB4;
 
 public class Main {
     static void methodFour() throws CustomException {

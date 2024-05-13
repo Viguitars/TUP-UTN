@@ -1,4 +1,4 @@
-package practicos.tp1.threadInterfazRunnable;
+package practicos.tp1_uml1.threadInterfazRunnable;
 
 public class Main {
     public static void main(String[] args) {

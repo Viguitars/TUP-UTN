@@ -1,4 +1,4 @@
-package practicos.tp3.Ejercicio1;
+package practicos.tp3_excepciones.Ejercicio1;
 
 public class Course {
     // Atributos

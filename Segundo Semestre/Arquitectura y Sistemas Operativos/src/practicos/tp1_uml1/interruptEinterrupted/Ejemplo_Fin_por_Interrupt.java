@@ -1,4 +1,4 @@
-package practicos.tp1.interruptEinterrupted;
+package practicos.tp1_uml1.interruptEinterrupted;
 
 public class Ejemplo_Fin_por_Interrupt {
     public static void main(String[] args) {

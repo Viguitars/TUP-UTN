@@ -1,4 +1,4 @@
-package practicos.tp1.threadDaemond;
+package practicos.tp1_uml1.threadDaemond;
 
 public class DaemondThread implements Runnable {
     public void run() {

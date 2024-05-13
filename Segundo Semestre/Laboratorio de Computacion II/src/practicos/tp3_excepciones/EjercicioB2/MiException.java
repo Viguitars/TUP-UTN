@@ -1,4 +1,4 @@
-package practicos.tp3.EjercicioB2;
+package practicos.tp3_excepciones.EjercicioB2;
 
 class MiException extends Exception {
     private String vehiculo;

@@ -1,4 +1,4 @@
-package practicos.tp3;
+package practicos.tp3_excepciones;
 
 import java.util.Random;
 

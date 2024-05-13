@@ -1,4 +1,4 @@
-package practicos.tp2.Ejercicio2;
+package practicos.tp2_uml2.Ejercicio2;
 
 public class Children extends Book {
     private int recommendedAge;

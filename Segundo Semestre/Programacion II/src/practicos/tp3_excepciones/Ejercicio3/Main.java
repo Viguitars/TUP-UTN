@@ -1,4 +1,4 @@
-package practicos.tp3.Ejercicio3;
+package practicos.tp3_excepciones.Ejercicio3;
 
 import java.util.ArrayList;
 import java.util.Iterator;

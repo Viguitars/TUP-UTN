@@ -1,4 +1,4 @@
-package practicos.tp3.Ejercicio2;
+package practicos.tp3_excepciones.Ejercicio2;
 
 public class Employee {
     private String name;

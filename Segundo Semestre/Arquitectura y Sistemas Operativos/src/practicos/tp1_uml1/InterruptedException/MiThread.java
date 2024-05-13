@@ -1,4 +1,4 @@
-package practicos.tp1.InterruptedException;
+package practicos.tp1_uml1.InterruptedException;
 
 public class MiThread extends Thread {
     public void run() {

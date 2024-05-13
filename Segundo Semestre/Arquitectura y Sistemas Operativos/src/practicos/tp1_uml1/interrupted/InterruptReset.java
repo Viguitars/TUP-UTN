@@ -1,4 +1,4 @@
-package practicos.tp1.interrupted;
+package practicos.tp1_uml1.interrupted;
 
 public class InterruptReset {
     public static void main(String[] args) {

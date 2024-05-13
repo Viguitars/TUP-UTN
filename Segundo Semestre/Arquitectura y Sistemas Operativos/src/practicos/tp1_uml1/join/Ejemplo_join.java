@@ -1,4 +1,4 @@
-package practicos.tp1.join;
+package practicos.tp1_uml1.join;
 
 public class Ejemplo_join {
     public static void main(String[] args) {
