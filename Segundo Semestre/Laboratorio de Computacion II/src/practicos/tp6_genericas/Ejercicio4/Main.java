@@ -4,7 +4,7 @@ import practicos.tp6_genericas.Ejercicio3.Producto;
 
 public class Main {
     public static void main(String[] args) {
-        // Crear una instancia de Almacen
+        // Crear una instancia de Almacén
         Almacen<Producto> almacen = new Almacen<>();
 
         // Agregar varios productos de diferentes tipos
