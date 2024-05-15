@@ -7,30 +7,41 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service // Indica que esta clase es un componente de servicio de Spring
 public class ClienteService {
 
-    @Autowired
+    @Autowired // Inyecta el ClienteRepository automáticamente
     private ClienteRepository clienteRepository;
 
-    public Cliente crearCliente(Cliente cliente){
-        return clienteRepository.save(cliente);
+    // Método para crear un nuevo cliente
+    public Cliente crearCliente(Cliente cliente) {
+        return clienteRepository.save(
+                cliente); // Guarda el cliente en la base de datos y lo devuelve
     }
 
-    public Cliente buscarClientePorId(Long id){
-        return clienteRepository.findById(id).orElse(null);
+    // Método para buscar un cliente por su ID
+    public Cliente buscarClientePorId(Long id) {
+        return clienteRepository.findById(id)
+                .orElse(null); // Busca un cliente por su ID y lo devuelve
     }
 
-    public List<Cliente> listarClientes(){
-        return clienteRepository.findAll();
+    // Método para listar todos los clientes
+    public List<Cliente> listarClientes() {
+        return clienteRepository.findAll(); // Devuelve una lista de todos los
+        // clientes en la base de datos
     }
 
-    public Cliente actualizarCliente(Cliente cliente){
-        return clienteRepository.save(cliente);
+    // Método para actualizar un cliente
+    public Cliente actualizarCliente(Cliente cliente) {
+        return clienteRepository.save(
+                cliente); // Actualiza el cliente en la base de datos y lo
+        // devuelve
     }
 
-    public void eliminarCliente(Long id){
-        clienteRepository.deleteById(id);
+    // Método para eliminar un cliente por su ID
+    public void eliminarCliente(Long id) {
+        clienteRepository.deleteById(
+                id); // Elimina un cliente de la base de datos por su ID
     }
 
 }
