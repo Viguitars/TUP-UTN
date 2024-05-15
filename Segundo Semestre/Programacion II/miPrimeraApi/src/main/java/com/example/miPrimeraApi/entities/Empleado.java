@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 @Entity
@@ -12,9 +13,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Empleado extends Persona implements Serializable{
+public class Empleado extends Persona implements Serializable {
 
     @Column(name = "tipo_empleado")
+    @Enumerated(EnumType.STRING)
     private TipoEmpleado tipoEmpleado;
 
 }
