@@ -7,35 +7,59 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/clientes")
+@RestController // Indica que esta clase es un controlador REST
+@RequestMapping("/clientes") // Define la ruta base para todos los endpoints
+// en este controlador
 public class ClienteController {
 
-    @Autowired
+    @Autowired // Inyecta el servicio ClienteService en el controlador
     private ClienteService clienteService;
 
-    @PostMapping()
-    public Cliente crearCliente(@RequestBody Cliente cliente){
-        return clienteService.crearCliente(cliente);
+    // Endpoint para crear un nuevo cliente
+    @PostMapping() // Maneja las solicitudes POST en la ruta /clientes
+    public Cliente crearCliente(
+            @RequestBody Cliente cliente) { // Recibe un objeto Cliente
+        // en el cuerpo de la solicitud
+        return clienteService.crearCliente(
+                cliente); // Llama al método crearCliente del servicio
+        // ClienteService
     }
 
-    @GetMapping("/{id}")
-    public Cliente buscarClientePorId(@PathVariable Long id){
-        return clienteService.buscarClientePorId(id);
+    // Endpoint para buscar un cliente por su ID
+    @GetMapping("/{id}") // Maneja las solicitudes GET en la ruta /clientes/{id}
+    public Cliente buscarClientePorId(
+            @PathVariable Long id) { // Recibe el ID del cliente
+        // como parte de la URL
+        return clienteService.buscarClientePorId(
+                id); // Llama al método buscarClientePorId del servicio
+        // ClienteService
     }
 
-    @GetMapping()
-    public List<Cliente> listarClientes(){
-        return clienteService.listarClientes();
+    // Endpoint para listar todos los clientes
+    @GetMapping() // Maneja las solicitudes GET en la ruta /clientes
+    public List<Cliente> listarClientes() {
+        return clienteService.listarClientes(); // Llama al método
+        // listarClientes del servicio ClienteService
     }
 
-    @PutMapping()
-    public Cliente actualizarCliente(@RequestBody Cliente cliente){
-        return clienteService.actualizarCliente(cliente);
+    // Endpoint para actualizar un cliente existente
+    @PutMapping() // Maneja las solicitudes PUT en la ruta /clientes
+    public Cliente actualizarCliente(
+            @RequestBody Cliente cliente) { // Recibe un objeto
+        // Cliente actualizado en el cuerpo de la solicitud
+        return clienteService.actualizarCliente(
+                cliente); // Llama al método actualizarCliente del servicio
+        // ClienteService
     }
 
+    // Endpoint para eliminar un cliente por su ID
     @DeleteMapping("/{id}")
-    public void eliminarCliente(@PathVariable Long id){
-        clienteService.eliminarCliente(id);
+    // Maneja las solicitudes DELETE en la ruta /clientes/{id}
+    public void eliminarCliente(
+            @PathVariable Long id) { // Recibe el ID del cliente como
+        // parte de la URL
+        clienteService.eliminarCliente(
+                id); // Llama al método eliminarCliente del servicio
+        // ClienteService
     }
 }
